@@ -1,0 +1,135 @@
+1. Which of the following EC2 services can be used without charge under the Free Tier?
+A. Any single EC2 instance type as long as it runs for less than one hour per day
+B. Any single EC2 instance type as long as it runs for less than 75 hours per month
+C. A single t2.micro EC2 instance type instance for 750 hours per month
+D. t2.micro EC2 instance type instances for a total of 750 hours per month
+2. You want to experiment with deploying a web server on an EC2 instance. Which two of the
+following resources can you include to make that work while remaining within the Free Tier?
+(Choose two.)
+A. A 5 GB bucket on S3
+B. A t2.micro instance type EC2 instance
+C. A 30 GB solid-state Elastic Block Store (EBS) drive
+D. Two 20 GB solid-state Elastic Block Store (EBS) drives
+3. Which of the following usage will always be cost-free even after your account’s Free Tier has
+expired? (Choose two.)
+A. One million API calls/month on Amazon API Gateway
+B. 10 GB of data retrievals from Amazon Glacier per month
+C. 500 MB/month of free storage on the Amazon Elastic Container Registry (ECR)
+D. 10 custom monitoring metrics and 10 alarms on Amazon CloudWatch
+4. Which of the following tools are available to ensure you won’t accidentally run past your
+Free Tier limit and incur unwanted costs? (Choose two.)
+A. Automated email alerts when activity approaches the Free Tier limits
+B. The Top Free Tier Services by Usage section on the Billing & Cost Management
+Dashboard
+C. Billing & Cost Management section on the Top Free Tier Services Dashboard
+D. The Billing Preferences Dashboard
+5. Which of the following is likely to be an accurate source of AWS pricing information?
+A. Wikipedia pages relating to a particular service
+B. The AWS Command-Line Interface (AWS CLI)
+C. AWS online documentation relating to a particular service
+D. The AWS Pricing Calculator
+6. Which of the following will probably not affect the pricing for an AWS service?
+A. Requests for raising the available service limit
+B. AWS region
+C. The volume of data saved to an S3 bucket
+D. The volume of data egress from an Amazon S3 Glacier vault
+7. Which of the following AWS documentation URLs points to the page containing an up-todate list of service limits?
+A. https://docs.aws.amazon.com/general/latest/gr/limits.html
+B. https://docs.aws.amazon.com/general/latest/gr/aws_service_
+limits.html
+C. https://aws.amazon.com/general/latest/gr/aws_service_limits.html
+D. https://docs.aws.amazon.com/latest/gr/aws_service_limits.html
+8. Which of the following best describes one possible reason for AWS service limits?
+A. To prevent individual customers from accidentally launching a crippling level of resource
+consumption
+B. To more equally distribute available resources between customers from different regions
+C. To allow customers to more gradually increase their deployments
+D. Because there are logical limits to the ability of AWS resources to scale up
+9. Is it always possible to request service limit increases from AWS?
+A. Yes. All service limits can be increased.
+B. No. A limit can never be increased.
+C. Service limits are defaults. They can be increased or decreased on demand.
+D. No. Some service limits are hard.
+10. Which is the best place to get a quick summary of this month’s spend for your account?
+A. Budgets
+B. Cost Explorer
+C. Cost and Usage reports
+D. Billing & Cost Management Dashboard
+11. What is the main goal for creating a Usage budget type (in AWS Budgets)?
+A. To correlate usage per unit cost to understand your account cost efficiency
+B. To track the status of any active reserved instances on your account
+C. To track particular categories of resource consumption
+D. To monitor costs being incurred against your account
+12. Which of the following is not a setting you can configure in a Cost budget?
+A. Period (monthly, quarterly, etc.)
+B. Instance type
+C. Start and stop dates
+D. Owner (username of resource owner)
+13. What is the main difference between the goals of Cost Explorer and of Cost and Usage
+reports?
+A. Cost Explorer displays visualizations of high-level historical and current account costs,
+whereas Cost and Usage reports generate granular usage reports in CSV format.
+B. Cost and Usage reports display visualizations of high-level historical and current account
+costs, whereas Cost Explorer generates granular usage reports in CSV format.
+C. Cost Explorer lets you set alerts that are triggered by billing events, whereas Cost and
+Usage reports help you visualize system events.
+D. Cost and Usage reports are meant to alert you to malicious intrusions, whereas Cost
+Explorer displays visualizations of high-level historical and current account costs.
+14. What is the purpose of cost allocation tags?
+A. To associate spend limits to automatically trigger resource shutdowns when necessary
+B. To help you identify the purpose and owner of a particular running resource to better
+understand and control deployments
+C. To help you identify resources for the purpose of tracking your account spending
+D. To visually associate account events with billing periods
+15. Which of the following scenarios would be a good use case for AWS Organizations?
+(Choose two.)
+A. A single company with multiple AWS accounts that wants a single place to administer
+everything
+B. An organization that provides AWS access to large teams of its developers and admins
+C. A company that’s integrated some operations with an upstream vendor
+D. A company with two distinct operational units, each with its own accounting system
+and AWS account
+16. Which of these tools lets you design graphs within the browser interface to track your
+account spending?
+A. Budgets
+B. Cost Explorer
+C. Reports
+D. Consolidating Billing
+---
+1. D. Only the t2.micro instance type is Free Tier–eligible, and any combination of t2.micro
+instances can be run up to a total of 750 hours per month.
+2. B, C. S3 buckets—while available in such volumes under the Free Tier—are not necessary for
+an EC2 instance. Since the maximum total EBS space allowed by the Free Tier is 30 GB, two
+20 GB would not be covered.
+3. B, D. The API calls/month and ECR free storage are available only under the Free Tier.
+4. A, B. There is no Top Free Tier Services Dashboard or, for that matter, a Billing Preferences
+Dashboard.
+5. C. Wikipedia pages aren’t updated or detailed enough to be helpful in this respect. The AWS
+CLI isn’t likely to have much (if any) pricing information. The Pricing Calculator may not
+contain the absolute latest information about service pricing.
+6. A. Pricing will normally change based on the volume of service units you consume and,
+often, between AWS regions.
+7. B. The correct URL is https://docs.aws.amazon.com/general/latest/gr/aws_
+service_limits.html.
+8. A. Resource limits exist only within individual regions; the limits in one region don’t impact
+another. There’s no logistical reason that customers can’t scale up deployments at any rate.
+There are, in fact, no logical limits to the ability of AWS resources to scale upward.
+9. D. While most service limits are soft and can be raised on request, some service limits exist
+that are absolute.
+10. D. The Cost Explorer and Cost and Usage reports provide more in-depth and/or customized
+details. Budgets allow you to set alerts based on usage.
+11. C. Reservation budgets track the status of any active reserved instances on your account.
+Cost budgets monitor costs being incurred against your account. There is no budget type that
+correlates usage per unit cost to determine your account cost efficiency.
+12. D. You can configure the period, instance type, and start/stop dates for a budget, but you
+can’t filter by resource owner.
+13. A. Billing events aren’t triggers for alerts. Nothing in this chapter discusses intrusion events.
+14. C. Tags are passive, so they can’t automatically trigger anything. Resource tags—not cost
+allocation tags—are meant to help you understand and control deployments. Tags aren’t
+associated with particular billing periods.
+15. A, C. Companies with multiple users of resources in a single AWS account would not benefit
+from AWS Organizations, nor would a company with completely separated units. The value
+of AWS Organizations is in integrating the administration of related accounts.
+16. B. Budgets are used to set alerts. Reports provide CSV-formatted data for offline processing.
+Consolidated Billing (now migrated to AWS Organizations) is for administering resources
+across multiple AWS accounts.
