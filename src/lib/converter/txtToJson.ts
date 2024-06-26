@@ -16,7 +16,8 @@ export const transformData = async (inputFolder: string = folderInput, outputFol
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder);
     }
-
+    //TODO EM
+    //filesInput = filesInput.filter(x => x === "Chapter 10.txt")
     for (const file of filesInput) {
       const filePath = path.join(inputFolder, file);
       if (fs.statSync(filePath).isFile()) {
@@ -100,13 +101,20 @@ function onlyAnswerRetriver(allTextAnswer: string): AnswerPlus[] {
 
 function onlyQuestionRetriver(allTextQuestion: string, group: string): Question[] {
   const questions: Question[] = [];
-  let splitAllToRow = allTextQuestion.split("\n")
+  let splitAllToRow = allTextQuestion.split("\r\n")
   splitAllToRow = splitAllToRow.splice(0, splitAllToRow.length -1 )
   let counter = 1
 
   let question: Question | undefined;
   for (const row of splitAllToRow) {
-    if (counter == 1) {
+    if(counter == 1 && (row.startsWith("E.") || row.startsWith("F."))){
+      question?.options.push({
+        id_option: row.substring(0, row.indexOf('.')),
+        option: row.substring(row.indexOf('.') + 1).trim()
+      })
+      counter--
+    }
+    else if (counter == 1) {
       question = {
         chapter: group,
         id_question: parseInt(row.substring(0, row.indexOf('.'))),

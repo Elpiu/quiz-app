@@ -112,8 +112,7 @@ E. 236 TB
 6. B, D. PostgreSQL and Amazon Aurora are options for RDS database engines. IBM dBase and the nonrelational databases DynamoDB and Redis are not available as RDS database engines.
 7. A, B. Aurora is Amazon’s proprietary database engine that works with existing PostgreSQL and MySQL databases. Aurora doesn’t support MariaDB, Oracle, or Microsoft SQL Server.
 8. B, C. Multi-AZ and snapshots can protect your data in the event of an availability zone failure. Read replicas don’t use synchronous replication and may lose some data. IOPS is a measurement of storage throughput. Vertical scaling refers to changing the instance class but has nothing to do with preventing data loss.
-9. B. Amazon Aurora uses a shared storage volume that automatically expands up to 64
-TB. The Microsoft SQL Server and Oracle database engines don’t offer this. Amazon Athena is not a database engine.
+9. B. Amazon Aurora uses a shared storage volume that automatically expands up to 64 TB. The Microsoft SQL Server and Oracle database engines don’t offer this. Amazon Athena is not a database engine.
 10. A. Multi-AZ lets your database withstand the failure of an RDS instance, even if the failure is due to an entire availability zone failing. Read replicas are a way to achieve horizontal scaling to improve performance of database reads but don’t increase availability. Point-intime recovery allows you to restore a database up to a point in time but doesn’t increase availability.
 11. B, D. A partition is an allocation of storage backed by solid-state drives and replicated across multiple availability zones. Tables are stored across partitions, but tables do not contain partitions. A primary key, not a partition, is used to uniquely identify an item in a table.
 12. A. The minimum monthly availability for DynamoDB is 99.99 percent in a single region. It’s not 99.95 percent, 99.9 percent, or 99.0 percent.

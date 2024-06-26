@@ -18,8 +18,7 @@ A. RDS
 B. Route 53
 C. EC2
 D. CloudFront
-5. Which of the following would be a valid endpoint your developers could use to access
-a particular Relational Database Service instance you’re running in the Northern Virginia region?
+5. Which of the following would be a valid endpoint your developers could use to access a particular Relational Database Service instance you’re running in the Northern Virginia region?
 A. us-east-1.amazonaws.com.rds
 B. ecs.eu-west-3.amazonaws.com
 C. rds.us-east-1.amazonaws.com
