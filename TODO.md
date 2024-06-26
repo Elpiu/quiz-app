@@ -1,1 +1,6 @@
-1. Aggiustare gli a capo all'interno dei file (Vedi in dataText Assessment Test)
+- Va creato un context che carichi tutti i capitoli con le domande 
+- Va creato un githubPages per il deploy statico
+- Componente per visualizzare una singola Domanda
+- Componente per visuallizzare una lista di domande
+- Logica per prendere domande a caso (univocamente)
+- Logica per calcoare numero risposte esatte

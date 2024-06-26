@@ -1,752 +1,731 @@
-[
-  {
-    "chapter": "Assessment Test",
-    "id_question": 1,
-    "question": "Which of the following describes the cloud design principle of scalability?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "The ability to automatically increase available compute resources to meet growing user demand"
-      },
-      {
-        "id_option": "B",
-        "option": "The ability to route incoming client requests between multiple application servers"
-      },
-      {
-        "id_option": "C",
-        "option": "The ability to segment physical resources into multiple virtual partitions"
-      },
-      {
-        "id_option": "D",
-        "option": "The ability to reduce production costs by spreading capital expenses across many accounts"
-      }
-    ],
-    "answer": {
-      "id": 1,
-      "id_options": [
-        "A"
+{
+  "id": 0,
+  "chapterName": "Assessment Test",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which of the following describes the cloud design principle of scalability?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The ability to automatically increase available compute resources to meet growing user demand"
+        },
+        {
+          "id_option": "B",
+          "option": "The ability to route incoming client requests between multiple application servers"
+        },
+        {
+          "id_option": "C",
+          "option": "The ability to segment physical resources into multiple virtual partitions"
+        },
+        {
+          "id_option": "D",
+          "option": "The ability to reduce production costs by spreading capital expenses across many accounts"
+        }
       ],
-      "explanation": "A scalable deployment will automatically “scale up” its capacity to meet growing user demand without the need for manual interference."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 2,
-    "question": "Which of the following best describes the cloud service model known as infrastructure as a service (IaaS)?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "End-user access to software applications delivered over the Internet"
-      },
-      {
-        "id_option": "B",
-        "option": "Access to a simplified interface through which customers can directly deploy their appli\u0002cation code without having to worry about managing the underlying infrastructure"
-      },
-      {
-        "id_option": "C",
-        "option": "Customer rental of the use of measured units of a provider’s physical compute, storage, and networking resources"
-      },
-      {
-        "id_option": "D",
-        "option": "Abstracted interfaces built to manage clusters of containerized workloads"
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "A scalable deployment will automatically “scale up” its capacity to meet growing user demand without the need for manual interference."
       }
-    ],
-    "answer": {
-      "id": 2,
-      "id_options": [
-        "C"
+    },
+    {
+      "id_question": 2,
+      "question": "Which of the following best describes the cloud service model known as infrastructure as a service (IaaS)?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "End-user access to software applications delivered over the Internet"
+        },
+        {
+          "id_option": "B",
+          "option": "Access to a simplified interface through which customers can directly deploy their appli\u0002cation code without having to worry about managing the underlying infrastructure"
+        },
+        {
+          "id_option": "C",
+          "option": "Customer rental of the use of measured units of a provider’s physical compute, storage, and networking resources"
+        },
+        {
+          "id_option": "D",
+          "option": "Abstracted interfaces built to manage clusters of containerized workloads"
+        }
       ],
-      "explanation": "IaaS is a model that gives customers access to virtualized units of a provider’s physical resources. IaaS customers manage their infrastructure much the way they would local, physical servers."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 3,
-    "question": "How does AWS ensure that no single customer consumes an unsustainable proportion of available resources?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "AWS allows customers to consume as much as they’re willing to pay for, regardless of general availability."
-      },
-      {
-        "id_option": "B",
-        "option": "AWS imposes default limits on the use of its service resources but allows customers to request higher limits."
-      },
-      {
-        "id_option": "C",
-        "option": "AWS imposes hard default limits on the use of its service resources."
-      },
-      {
-        "id_option": "D",
-        "option": "AWS imposes default limits on the use of its services by Basic account holders; Premium account holders face no limits."
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "IaaS is a model that gives customers access to virtualized units of a provider’s physical resources. IaaS customers manage their infrastructure much the way they would local, physical servers."
       }
-    ],
-    "answer": {
-      "id": 3,
-      "id_options": [
-        "B"
+    },
+    {
+      "id_question": 3,
+      "question": "How does AWS ensure that no single customer consumes an unsustainable proportion of available resources?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AWS allows customers to consume as much as they’re willing to pay for, regardless of general availability."
+        },
+        {
+          "id_option": "B",
+          "option": "AWS imposes default limits on the use of its service resources but allows customers to request higher limits."
+        },
+        {
+          "id_option": "C",
+          "option": "AWS imposes hard default limits on the use of its service resources."
+        },
+        {
+          "id_option": "D",
+          "option": "AWS imposes default limits on the use of its services by Basic account holders; Premium account holders face no limits."
+        }
       ],
-      "explanation": "AWS applies usage limits on most features of its services. However, in many cases, you can apply for a limit to be lifted."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 4,
-    "question": "The AWS Free Tier is designed to give new account holders the opportunity to get to know how their services work without necessarily costing any money. How does it work?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "You get service credits that can be used to provision and launch a few typical workloads."
-      },
-      {
-        "id_option": "B",
-        "option": "You get full free access to a few core AWS services for one month."
-      },
-      {
-        "id_option": "C",
-        "option": "You get low-cost access to many core AWS services for three months."
-      },
-      {
-        "id_option": "D",
-        "option": "You get free lightweight access to many core AWS services for a full 12 months."
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "AWS applies usage limits on most features of its services. However, in many cases, you can apply for a limit to be lifted."
       }
-    ],
-    "answer": {
-      "id": 4,
-      "id_options": [
-        "D"
+    },
+    {
+      "id_question": 4,
+      "question": "The AWS Free Tier is designed to give new account holders the opportunity to get to know how their services work without necessarily costing any money. How does it work?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "You get service credits that can be used to provision and launch a few typical workloads."
+        },
+        {
+          "id_option": "B",
+          "option": "You get full free access to a few core AWS services for one month."
+        },
+        {
+          "id_option": "C",
+          "option": "You get low-cost access to many core AWS services for three months."
+        },
+        {
+          "id_option": "D",
+          "option": "You get free lightweight access to many core AWS services for a full 12 months."
+        }
       ],
-      "explanation": "The Free Tier offers you free lightweight access to many core AWS services for a full 12 months."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 5,
-    "question": "AWS customers receive “production system down” support within one hour when they sub\u0002scribe to which support plan(s)?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Enterprise."
-      },
-      {
-        "id_option": "B",
-        "option": "Business and Enterprise."
-      },
-      {
-        "id_option": "C",
-        "option": "Developer and Basic."
-      },
-      {
-        "id_option": "D",
-        "option": "All plans get this level of support."
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "The Free Tier offers you free lightweight access to many core AWS services for a full 12 months."
       }
-    ],
-    "answer": {
-      "id": 5,
-      "id_options": [
-        "B"
+    },
+    {
+      "id_question": 5,
+      "question": "AWS customers receive “production system down” support within one hour when they sub\u0002scribe to which support plan(s)?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Enterprise."
+        },
+        {
+          "id_option": "B",
+          "option": "Business and Enterprise."
+        },
+        {
+          "id_option": "C",
+          "option": "Developer and Basic."
+        },
+        {
+          "id_option": "D",
+          "option": "All plans get this level of support."
+        }
       ],
-      "explanation": "“Production system down” support within one hour is available only to subscribers to the Business or Enterprise support plans."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 6,
-    "question": "AWS customers get full access to the AWS Trusted Advisor best practice checks when they subscribe to which support plan(s)?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "All plans get this level of support."
-      },
-      {
-        "id_option": "B",
-        "option": "Basic and Business."
-      },
-      {
-        "id_option": "C",
-        "option": "Business and Enterprise."
-      },
-      {
-        "id_option": "D",
-        "option": "Developer, Business, and Enterprise."
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "“Production system down” support within one hour is available only to subscribers to the Business or Enterprise support plans."
       }
-    ],
-    "answer": {
-      "id": 6,
-      "id_options": [
-        "D"
+    },
+    {
+      "id_question": 6,
+      "question": "AWS customers get full access to the AWS Trusted Advisor best practice checks when they subscribe to which support plan(s)?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "All plans get this level of support."
+        },
+        {
+          "id_option": "B",
+          "option": "Basic and Business."
+        },
+        {
+          "id_option": "C",
+          "option": "Business and Enterprise."
+        },
+        {
+          "id_option": "D",
+          "option": "Developer, Business, and Enterprise."
+        }
       ],
-      "explanation": "All support plans come with full access to Trusted Advisor except for the (free) Basic plan."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 7,
-    "question": "The AWS Shared Responsibility Model illustrates how AWS itself (as opposed to its cus\u0002tomers) is responsible for which aspects of the cloud environment?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "The redundancy and integrity of customer-added data"
-      },
-      {
-        "id_option": "B",
-        "option": "The underlying integrity and security of AWS physical resources"
-      },
-      {
-        "id_option": "C",
-        "option": "Data and configurations added by customers"
-      },
-      {
-        "id_option": "D",
-        "option": "The operating systems run on EC2 instances"
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "All support plans come with full access to Trusted Advisor except for the (free) Basic plan."
       }
-    ],
-    "answer": {
-      "id": 7,
-      "id_options": [
-        "B"
+    },
+    {
+      "id_question": 7,
+      "question": "The AWS Shared Responsibility Model illustrates how AWS itself (as opposed to its cus\u0002tomers) is responsible for which aspects of the cloud environment?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The redundancy and integrity of customer-added data"
+        },
+        {
+          "id_option": "B",
+          "option": "The underlying integrity and security of AWS physical resources"
+        },
+        {
+          "id_option": "C",
+          "option": "Data and configurations added by customers"
+        },
+        {
+          "id_option": "D",
+          "option": "The operating systems run on EC2 instances"
+        }
       ],
-      "explanation": "According to the Shared Responsibility Model, AWS is responsible for the underlying integrity and security of AWS physical resources, but not the integrity of the data and config\u0002urations added by customers."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 8,
-    "question": "Which of these is a designation for one or more AWS data centers within a single geo\u0002graphic area?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Availability zone"
-      },
-      {
-        "id_option": "B",
-        "option": "Region"
-      },
-      {
-        "id_option": "C",
-        "option": "Network subnet"
-      },
-      {
-        "id_option": "D",
-        "option": "Geo-unit"
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "According to the Shared Responsibility Model, AWS is responsible for the underlying integrity and security of AWS physical resources, but not the integrity of the data and config\u0002urations added by customers."
       }
-    ],
-    "answer": {
-      "id": 8,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 8,
+      "question": "Which of these is a designation for one or more AWS data centers within a single geo\u0002graphic area?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Availability zone"
+        },
+        {
+          "id_option": "B",
+          "option": "Region"
+        },
+        {
+          "id_option": "C",
+          "option": "Network subnet"
+        },
+        {
+          "id_option": "D",
+          "option": "Geo-unit"
+        }
       ],
-      "explanation": "An availability zone is one or more physical data centers located within a single AWS region."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 9,
-    "question": "How, using security best practices, should your organization’s team members access your AWS account resources?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Only a single team member should be given any account access."
-      },
-      {
-        "id_option": "B",
-        "option": "Through a jointly shared single account user who’s been given full account-wide permissions."
-      },
-      {
-        "id_option": "C",
-        "option": "Through the use of specially created users, groups, and roles, each given the fewest per\u0002missions necessary."
-      },
-      {
-        "id_option": "D",
-        "option": "Ideally, resource access should occur only through the use of access keys."
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "An availability zone is one or more physical data centers located within a single AWS region."
       }
-    ],
-    "answer": {
-      "id": 9,
-      "id_options": [
-        "C"
+    },
+    {
+      "id_question": 9,
+      "question": "How, using security best practices, should your organization’s team members access your AWS account resources?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Only a single team member should be given any account access."
+        },
+        {
+          "id_option": "B",
+          "option": "Through a jointly shared single account user who’s been given full account-wide permissions."
+        },
+        {
+          "id_option": "C",
+          "option": "Through the use of specially created users, groups, and roles, each given the fewest per\u0002missions necessary."
+        },
+        {
+          "id_option": "D",
+          "option": "Ideally, resource access should occur only through the use of access keys."
+        }
       ],
-      "explanation": "Team members should each be given identities (as users, groups, and/or roles) configured with exactly the permissions necessary to do their jobs and no more."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 10,
-    "question": "Which of the following describes a methodology that protects your organization’s data when it’s on-site locally, in transit to AWS, and stored on AWS?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Client-side encryption"
-      },
-      {
-        "id_option": "B",
-        "option": "Server-side encryption"
-      },
-      {
-        "id_option": "C",
-        "option": "Cryptographic transformation"
-      },
-      {
-        "id_option": "D",
-        "option": "Encryption at rest"
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Team members should each be given identities (as users, groups, and/or roles) configured with exactly the permissions necessary to do their jobs and no more."
       }
-    ],
-    "answer": {
-      "id": 10,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 10,
+      "question": "Which of the following describes a methodology that protects your organization’s data when it’s on-site locally, in transit to AWS, and stored on AWS?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Client-side encryption"
+        },
+        {
+          "id_option": "B",
+          "option": "Server-side encryption"
+        },
+        {
+          "id_option": "C",
+          "option": "Cryptographic transformation"
+        },
+        {
+          "id_option": "D",
+          "option": "Encryption at rest"
+        }
       ],
-      "explanation": "End-to-end encryption that protects data at every step of its life cycle is called client-side encryption."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 11,
-    "question": "What authentication method will you use to access your AWS resources remotely through the AWS Command-Line Interface (CLI)?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Strong password"
-      },
-      {
-        "id_option": "B",
-        "option": "Multifactor authentication"
-      },
-      {
-        "id_option": "C",
-        "option": "SSH key pairs"
-      },
-      {
-        "id_option": "D",
-        "option": "Access keys"
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "End-to-end encryption that protects data at every step of its life cycle is called client-side encryption."
       }
-    ],
-    "answer": {
-      "id": 11,
-      "id_options": [
-        "D"
+    },
+    {
+      "id_question": 11,
+      "question": "What authentication method will you use to access your AWS resources remotely through the AWS Command-Line Interface (CLI)?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Strong password"
+        },
+        {
+          "id_option": "B",
+          "option": "Multifactor authentication"
+        },
+        {
+          "id_option": "C",
+          "option": "SSH key pairs"
+        },
+        {
+          "id_option": "D",
+          "option": "Access keys"
+        }
       ],
-      "explanation": "AWS CLI requests are authenticated through access keys."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 12,
-    "question": "Which of these is the primary benefit from using resource tags with your AWS assets?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Tags enable the use of remote administration operations via the AWS CLI."
-      },
-      {
-        "id_option": "B",
-        "option": "Tags make it easier to identify and administrate running resources in a busy AWS account."
-      },
-      {
-        "id_option": "C",
-        "option": "Tags enhance data security throughout your account."
-      },
-      {
-        "id_option": "D",
-        "option": "Some AWS services won’t work without the use of resource tags."
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "AWS CLI requests are authenticated through access keys."
       }
-    ],
-    "answer": {
-      "id": 12,
-      "id_options": [
-        "B"
+    },
+    {
+      "id_question": 12,
+      "question": "Which of these is the primary benefit from using resource tags with your AWS assets?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Tags enable the use of remote administration operations via the AWS CLI."
+        },
+        {
+          "id_option": "B",
+          "option": "Tags make it easier to identify and administrate running resources in a busy AWS account."
+        },
+        {
+          "id_option": "C",
+          "option": "Tags enhance data security throughout your account."
+        },
+        {
+          "id_option": "D",
+          "option": "Some AWS services won’t work without the use of resource tags."
+        }
       ],
-      "explanation": "Resource tags—especially when applied with consistent naming patterns—can make it easier to visualize and administrate resources on busy accounts."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 13,
-    "question": "What defines the base operating system and software stack that will be available for a new Elastic Compute Cloud (EC2) instance when it launches?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "The Virtual Private Cloud (VPC) into which you choose to launch your instance."
-      },
-      {
-        "id_option": "B",
-        "option": "The instance type you select."
-      },
-      {
-        "id_option": "C",
-        "option": "The Amazon Machine Image (AMI) you select."
-      },
-      {
-        "id_option": "D",
-        "option": "You don’t need to define the base OS—you can install that once the instance launches."
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Resource tags—especially when applied with consistent naming patterns—can make it easier to visualize and administrate resources on busy accounts."
       }
-    ],
-    "answer": {
-      "id": 13,
-      "id_options": [
-        "C"
+    },
+    {
+      "id_question": 13,
+      "question": "What defines the base operating system and software stack that will be available for a new Elastic Compute Cloud (EC2) instance when it launches?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The Virtual Private Cloud (VPC) into which you choose to launch your instance."
+        },
+        {
+          "id_option": "B",
+          "option": "The instance type you select."
+        },
+        {
+          "id_option": "C",
+          "option": "The Amazon Machine Image (AMI) you select."
+        },
+        {
+          "id_option": "D",
+          "option": "You don’t need to define the base OS—you can install that once the instance launches."
+        }
       ],
-      "explanation": "The AMI you select while configuring your new instance defines the base OS."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 14,
-    "question": "Which of the following AWS compute services offers an administration experience that most closely resembles the way you would run physical servers in your own local data center?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Simple Storage Service (S3)"
-      },
-      {
-        "id_option": "B",
-        "option": "Elastic Container Service (ECS)"
-      },
-      {
-        "id_option": "C",
-        "option": "Elastic Compute Cloud (EC2)"
-      },
-      {
-        "id_option": "D",
-        "option": "Lambda"
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "The AMI you select while configuring your new instance defines the base OS."
       }
-    ],
-    "answer": {
-      "id": 14,
-      "id_options": [
-        "C"
+    },
+    {
+      "id_question": 14,
+      "question": "Which of the following AWS compute services offers an administration experience that most closely resembles the way you would run physical servers in your own local data center?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Simple Storage Service (S3)"
+        },
+        {
+          "id_option": "B",
+          "option": "Elastic Container Service (ECS)"
+        },
+        {
+          "id_option": "C",
+          "option": "Elastic Compute Cloud (EC2)"
+        },
+        {
+          "id_option": "D",
+          "option": "Lambda"
+        }
       ],
-      "explanation": "You can administer EC2 instances using techniques that are similar to the way you’d work with physical servers."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 15,
-    "question": "Which of the following AWS object storage services offers the lowest ongoing charges, but at the cost of some convenience?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "S3 Glacier"
-      },
-      {
-        "id_option": "B",
-        "option": "Storage Gateway"
-      },
-      {
-        "id_option": "C",
-        "option": "Simple Storage Service (S3)"
-      },
-      {
-        "id_option": "D",
-        "option": "Elastic Block Store (EBS)"
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "You can administer EC2 instances using techniques that are similar to the way you’d work with physical servers."
       }
-    ],
-    "answer": {
-      "id": 15,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 15,
+      "question": "Which of the following AWS object storage services offers the lowest ongoing charges, but at the cost of some convenience?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "S3 Glacier"
+        },
+        {
+          "id_option": "B",
+          "option": "Storage Gateway"
+        },
+        {
+          "id_option": "C",
+          "option": "Simple Storage Service (S3)"
+        },
+        {
+          "id_option": "D",
+          "option": "Elastic Block Store (EBS)"
+        }
       ],
-      "explanation": "Amazon Glacier can reliably store large amounts of data for a very low price but requires CLI or SDK administration access, and retrieving your data can take hours."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 16,
-    "question": "Which of the following AWS storage services can make the most practical sense for petabyte\u0002sized archives that currently exist in your local data center?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Saving to a Glacier Vault"
-      },
-      {
-        "id_option": "B",
-        "option": "Saving to a Simple Storage Service (S3) bucket"
-      },
-      {
-        "id_option": "C",
-        "option": "Saving to an Elastic Block Store (EBS) volume"
-      },
-      {
-        "id_option": "D",
-        "option": "Saving to an AWS Snowball device"
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Amazon Glacier can reliably store large amounts of data for a very low price but requires CLI or SDK administration access, and retrieving your data can take hours."
       }
-    ],
-    "answer": {
-      "id": 16,
-      "id_options": [
-        "D"
+    },
+    {
+      "id_question": 16,
+      "question": "Which of the following AWS storage services can make the most practical sense for petabyte\u0002sized archives that currently exist in your local data center?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Saving to a Glacier Vault"
+        },
+        {
+          "id_option": "B",
+          "option": "Saving to a Simple Storage Service (S3) bucket"
+        },
+        {
+          "id_option": "C",
+          "option": "Saving to an Elastic Block Store (EBS) volume"
+        },
+        {
+          "id_option": "D",
+          "option": "Saving to an AWS Snowball device"
+        }
       ],
-      "explanation": "You can transfer large data stores to the AWS cloud (to S3 buckets) by having Amazon send you a Snowball device to which you copy your data and which you then ship back to Amazon."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 17,
-    "question": "Which of the following will provide the most reliable and scalable relational database experi\u0002ence on AWS?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Relational Database Service (RDS)"
-      },
-      {
-        "id_option": "B",
-        "option": "Running a database on an EC2 instance"
-      },
-      {
-        "id_option": "C",
-        "option": "DynamoDB"
-      },
-      {
-        "id_option": "D",
-        "option": "Redshift"
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "You can transfer large data stores to the AWS cloud (to S3 buckets) by having Amazon send you a Snowball device to which you copy your data and which you then ship back to Amazon."
       }
-    ],
-    "answer": {
-      "id": 17,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 17,
+      "question": "Which of the following will provide the most reliable and scalable relational database experi\u0002ence on AWS?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Relational Database Service (RDS)"
+        },
+        {
+          "id_option": "B",
+          "option": "Running a database on an EC2 instance"
+        },
+        {
+          "id_option": "C",
+          "option": "DynamoDB"
+        },
+        {
+          "id_option": "D",
+          "option": "Redshift"
+        }
       ],
-      "explanation": "RDS offers a managed and highly scalable database environment for most popular relational database engines (including MySQL, MariaDB, and Oracle)."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 18,
-    "question": "What’s the best and simplest way to increase reliability of an RDS database instance?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Increase the available IOPS."
-      },
-      {
-        "id_option": "B",
-        "option": "Choose the Aurora database engine when you configure your instance."
-      },
-      {
-        "id_option": "C",
-        "option": "Enable Multi-AZ."
-      },
-      {
-        "id_option": "D",
-        "option": "Duplicate the database in a second AWS region."
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "RDS offers a managed and highly scalable database environment for most popular relational database engines (including MySQL, MariaDB, and Oracle)."
       }
-    ],
-    "answer": {
-      "id": 18,
-      "id_options": [
-        "C"
+    },
+    {
+      "id_question": 18,
+      "question": "What’s the best and simplest way to increase reliability of an RDS database instance?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Increase the available IOPS."
+        },
+        {
+          "id_option": "B",
+          "option": "Choose the Aurora database engine when you configure your instance."
+        },
+        {
+          "id_option": "C",
+          "option": "Enable Multi-AZ."
+        },
+        {
+          "id_option": "D",
+          "option": "Duplicate the database in a second AWS region."
+        }
       ],
-      "explanation": "Multi-AZ will automatically replicate your database in a second availability zone for greater reliability. It will, of course, also double your costs."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 19,
-    "question": "How does AWS describe an isolated networking environment into which you can launch compute resources while closely controlling network access?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "Security group"
-      },
-      {
-        "id_option": "B",
-        "option": "Virtual private cloud (VPC)"
-      },
-      {
-        "id_option": "C",
-        "option": "Availability zone"
-      },
-      {
-        "id_option": "D",
-        "option": "Internet gateway"
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Multi-AZ will automatically replicate your database in a second availability zone for greater reliability. It will, of course, also double your costs."
       }
-    ],
-    "answer": {
-      "id": 19,
-      "id_options": [
-        "B"
+    },
+    {
+      "id_question": 19,
+      "question": "How does AWS describe an isolated networking environment into which you can launch compute resources while closely controlling network access?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Security group"
+        },
+        {
+          "id_option": "B",
+          "option": "Virtual private cloud (VPC)"
+        },
+        {
+          "id_option": "C",
+          "option": "Availability zone"
+        },
+        {
+          "id_option": "D",
+          "option": "Internet gateway"
+        }
       ],
-      "explanation": "A VPC is an isolated networking environment into which you can launch compute resources while closely controlling network access."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 20,
-    "question": "What service does AWS use to provide a content delivery network (CDN) for its customers?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "VPC peering"
-      },
-      {
-        "id_option": "B",
-        "option": "Internet gateway"
-      },
-      {
-        "id_option": "C",
-        "option": "Route 53"
-      },
-      {
-        "id_option": "D",
-        "option": "CloudFront"
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A VPC is an isolated networking environment into which you can launch compute resources while closely controlling network access."
       }
-    ],
-    "answer": {
-      "id": 20,
-      "id_options": [
-        "D"
+    },
+    {
+      "id_question": 20,
+      "question": "What service does AWS use to provide a content delivery network (CDN) for its customers?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "VPC peering"
+        },
+        {
+          "id_option": "B",
+          "option": "Internet gateway"
+        },
+        {
+          "id_option": "C",
+          "option": "Route 53"
+        },
+        {
+          "id_option": "D",
+          "option": "CloudFront"
+        }
       ],
-      "explanation": "CloudFront is a content delivery network (CDN) that distributes content through its global network of edge locations."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 21,
-    "question": "What is Amazon’s Git-compliant version control service for integrating your source code with AWS resources?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "CodeCommit"
-      },
-      {
-        "id_option": "B",
-        "option": "CodeBuild"
-      },
-      {
-        "id_option": "C",
-        "option": "CodeDeploy"
-      },
-      {
-        "id_option": "D",
-        "option": "Cloud9"
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "CloudFront is a content delivery network (CDN) that distributes content through its global network of edge locations."
       }
-    ],
-    "answer": {
-      "id": 21,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 21,
+      "question": "What is Amazon’s Git-compliant version control service for integrating your source code with AWS resources?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "CodeCommit"
+        },
+        {
+          "id_option": "B",
+          "option": "CodeBuild"
+        },
+        {
+          "id_option": "C",
+          "option": "CodeDeploy"
+        },
+        {
+          "id_option": "D",
+          "option": "Cloud9"
+        }
       ],
-      "explanation": "CodeCommit is a Git-compliant version control service for integrating your source code with AWS resources."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 22,
-    "question": "Which AWS service allows you to build a script-like template representing complex resource stacks that can be used to launch precisely defined environments involving the full range of AWS resources?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "LightSail"
-      },
-      {
-        "id_option": "B",
-        "option": "EC2"
-      },
-      {
-        "id_option": "C",
-        "option": "CodeDeploy"
-      },
-      {
-        "id_option": "D",
-        "option": "CloudFormation"
+      "answer": {
+        "id": 21,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "CodeCommit is a Git-compliant version control service for integrating your source code with AWS resources."
       }
-    ],
-    "answer": {
-      "id": 22,
-      "id_options": [
-        "D"
+    },
+    {
+      "id_question": 22,
+      "question": "Which AWS service allows you to build a script-like template representing complex resource stacks that can be used to launch precisely defined environments involving the full range of AWS resources?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "LightSail"
+        },
+        {
+          "id_option": "B",
+          "option": "EC2"
+        },
+        {
+          "id_option": "C",
+          "option": "CodeDeploy"
+        },
+        {
+          "id_option": "D",
+          "option": "CloudFormation"
+        }
       ],
-      "explanation": "CloudFormation templates can represent complex resource stacks that can be used to launch precisely defined environments involving the full range of AWS resources."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 23,
-    "question": "What is Amazon Athena?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "A service that permits queries against data stored in Amazon S3"
-      },
-      {
-        "id_option": "B",
-        "option": "A service that permits processing and analyzing of real-time video and data streams"
-      },
-      {
-        "id_option": "C",
-        "option": "A NoSQL database engine"
-      },
-      {
-        "id_option": "D",
-        "option": "A Greece-based Amazon Direct Connect service partner"
+      "answer": {
+        "id": 22,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "CloudFormation templates can represent complex resource stacks that can be used to launch precisely defined environments involving the full range of AWS resources."
       }
-    ],
-    "answer": {
-      "id": 23,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 23,
+      "question": "What is Amazon Athena?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A service that permits queries against data stored in Amazon S3"
+        },
+        {
+          "id_option": "B",
+          "option": "A service that permits processing and analyzing of real-time video and data streams"
+        },
+        {
+          "id_option": "C",
+          "option": "A NoSQL database engine"
+        },
+        {
+          "id_option": "D",
+          "option": "A Greece-based Amazon Direct Connect service partner"
+        }
       ],
-      "explanation": "Amazon Athena is a managed service that permits queries against S3-stored data."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 24,
-    "question": "What is Amazon Kinesis?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "A service that permits queries against data stored in Amazon S3"
-      },
-      {
-        "id_option": "B",
-        "option": "A service that permits processing and analyzing of real-time video and data streams"
-      },
-      {
-        "id_option": "C",
-        "option": "A no-SQL database engine"
-      },
-      {
-        "id_option": "D",
-        "option": "A Greece-based Amazon Direct Connect service partner"
+      "answer": {
+        "id": 23,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Amazon Athena is a managed service that permits queries against S3-stored data."
       }
-    ],
-    "answer": {
-      "id": 24,
-      "id_options": [
-        "B"
+    },
+    {
+      "id_question": 24,
+      "question": "What is Amazon Kinesis?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A service that permits queries against data stored in Amazon S3"
+        },
+        {
+          "id_option": "B",
+          "option": "A service that permits processing and analyzing of real-time video and data streams"
+        },
+        {
+          "id_option": "C",
+          "option": "A no-SQL database engine"
+        },
+        {
+          "id_option": "D",
+          "option": "A Greece-based Amazon Direct Connect service partner"
+        }
       ],
-      "explanation": "Amazon Kinesis allows processing and analyzing of real time video and data streams."
-    }
-  },
-  {
-    "chapter": "Assessment Test",
-    "id_question": 25,
-    "question": "What is Amazon Cognito?",
-    "options": [
-      {
-        "id_option": "A",
-        "option": "A service that can manage authentication and authorization for your public-facing applications"
-      },
-      {
-        "id_option": "B",
-        "option": "A service that automates the administration of authentication secrets used by your AWS resources"
-      },
-      {
-        "id_option": "C",
-        "option": "A service that permits processing and analyzing of real-time video and data streams"
-      },
-      {
-        "id_option": "D",
-        "option": "A relational database engine"
+      "answer": {
+        "id": 24,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Amazon Kinesis allows processing and analyzing of real time video and data streams."
       }
-    ],
-    "answer": {
-      "id": 25,
-      "id_options": [
-        "A"
+    },
+    {
+      "id_question": 25,
+      "question": "What is Amazon Cognito?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A service that can manage authentication and authorization for your public-facing applications"
+        },
+        {
+          "id_option": "B",
+          "option": "A service that automates the administration of authentication secrets used by your AWS resources"
+        },
+        {
+          "id_option": "C",
+          "option": "A service that permits processing and analyzing of real-time video and data streams"
+        },
+        {
+          "id_option": "D",
+          "option": "A relational database engine"
+        }
       ],
-      "explanation": "Amazon Cognito can manage authentication and authorization for your public-facing applications."
+      "answer": {
+        "id": 25,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Amazon Cognito can manage authentication and authorization for your public-facing applications."
+      }
     }
-  }
-]
+  ]
+}

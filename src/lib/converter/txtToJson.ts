@@ -16,16 +16,20 @@ export const transformData = async (inputFolder: string = folderInput, outputFol
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder);
     }
-    //TODO EM
-    //filesInput = filesInput.filter(x => x === "Chapter 10.txt")
+    let counter: number = 0;
     for (const file of filesInput) {
       const filePath = path.join(inputFolder, file);
       if (fs.statSync(filePath).isFile()) {
         try {
           // Assicurati che parseQuestions sia una funzione definita
-          const questions = await parseQuestions(filePath, path.parse(file).name);
+          let chapter = {
+            id: counter++,
+            chapterName: path.parse(file).name,
+            questions: await parseQuestions(filePath)
+
+          } as Chapter
           const outputFilePath = path.join(outputFolder, path.parse(file).name + '.json');
-          fs.writeFileSync(outputFilePath, JSON.stringify(questions, null, 2));
+          fs.writeFileSync(outputFilePath, JSON.stringify(chapter, null, 2));
           console.log(`Successfully wrote to ${outputFilePath}`);
         } catch (error) {
           console.error(`Error processing file ${filePath}:`, error);
@@ -36,7 +40,7 @@ export const transformData = async (inputFolder: string = folderInput, outputFol
     console.error('Error reading input folder:', error);
   }
 }
-export const parseQuestions = async (filePath: string, fileName: string): Promise<Question[]> => {
+export const parseQuestions = async (filePath: string): Promise<Question[]> => {
 
 
   // Read the file synchronously
@@ -46,7 +50,7 @@ export const parseQuestions = async (filePath: string, fileName: string): Promis
 
 
 
-  let questions: Question[] = onlyQuestionRetriver(allQ, fileName);
+  let questions: Question[] = onlyQuestionRetriver(allQ);
   let answers: AnswerPlus[] = onlyAnswerRetriver(allA);
 
   if (questions.length != answers.length){
@@ -99,7 +103,7 @@ function onlyAnswerRetriver(allTextAnswer: string): AnswerPlus[] {
   return answers
 }
 
-function onlyQuestionRetriver(allTextQuestion: string, group: string): Question[] {
+function onlyQuestionRetriver(allTextQuestion: string): Question[] {
   const questions: Question[] = [];
   let splitAllToRow = allTextQuestion.split("\r\n")
   splitAllToRow = splitAllToRow.splice(0, splitAllToRow.length -1 )
@@ -116,7 +120,6 @@ function onlyQuestionRetriver(allTextQuestion: string, group: string): Question[
     }
     else if (counter == 1) {
       question = {
-        chapter: group,
         id_question: parseInt(row.substring(0, row.indexOf('.'))),
         question: row.substring(row.indexOf('.') + 1).trim(),
         options: [],

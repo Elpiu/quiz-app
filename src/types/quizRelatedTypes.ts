@@ -1,17 +1,22 @@
-export interface Option {
+type  Option = {
   id_option: string;
   option: string;
 }
 
-export interface Answer {
+type  Answer = {
   id_options: string[];
   explanation: string;
 }
 
-export interface Question {
+type  Question = {
   id_question: number;
-  chapter: string;
   question: string;
   options: Option[];
   answer?: Answer;
+}
+
+type Chapter = {
+  id: number;
+  chapterName: string;
+  questions: Question[],
 }
