@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {Answer, Question} from "@/types/quizRelatedTypes";
 
 type AnswerPlus = Answer & { id: number }
 
@@ -21,9 +20,10 @@ export const transformData = async (inputFolder: string = folderInput, outputFol
       const filePath = path.join(inputFolder, file);
       if (fs.statSync(filePath).isFile()) {
         try {
-          // Assicurati che parseQuestions sia una funzione definita
+
+          const counterId = trovaNumero(path.parse(file).name);
           let chapter = {
-            id: counter++,
+            id: counterId,
             chapterName: path.parse(file).name,
             questions: await parseQuestions(filePath)
 
@@ -48,18 +48,16 @@ export const parseQuestions = async (filePath: string): Promise<Question[]> => {
   let [allQ, allA] = fullText.split('---')
 
 
-
-
   let questions: Question[] = onlyQuestionRetriver(allQ);
   let answers: AnswerPlus[] = onlyAnswerRetriver(allA);
 
-  if (questions.length != answers.length){
+  if (questions.length != answers.length) {
     throw new Error("Domande e Risposte non hanno la stessa dimensione!!?")
   }
 
   // Itera attraverso le domande e assegna le risposte
   // Posso farlo perchè spero siano in ordine; quindi question 1 e answer 1
-  for (let i = 0; i< questions.length && i < answers.length; i++) {
+  for (let i = 0; i < questions.length && i < answers.length; i++) {
     questions[i].answer = answers[i]
   }
 
@@ -106,19 +104,18 @@ function onlyAnswerRetriver(allTextAnswer: string): AnswerPlus[] {
 function onlyQuestionRetriver(allTextQuestion: string): Question[] {
   const questions: Question[] = [];
   let splitAllToRow = allTextQuestion.split("\r\n")
-  splitAllToRow = splitAllToRow.splice(0, splitAllToRow.length -1 )
+  splitAllToRow = splitAllToRow.splice(0, splitAllToRow.length - 1)
   let counter = 1
 
   let question: Question | undefined;
   for (const row of splitAllToRow) {
-    if(counter == 1 && (row.startsWith("E.") || row.startsWith("F."))){
+    if (counter == 1 && (row.startsWith("E.") || row.startsWith("F."))) {
       question?.options.push({
         id_option: row.substring(0, row.indexOf('.')),
         option: row.substring(row.indexOf('.') + 1).trim()
       })
       counter--
-    }
-    else if (counter == 1) {
+    } else if (counter == 1) {
       question = {
         id_question: parseInt(row.substring(0, row.indexOf('.'))),
         question: row.substring(row.indexOf('.') + 1).trim(),
@@ -135,4 +132,18 @@ function onlyQuestionRetriver(allTextQuestion: string): Question[] {
   }
 
   return questions;
+}
+
+function trovaNumero(stringa: string): number {
+  // Definiamo un'espressione regolare per trovare un numero intero nella stringa
+  const regex = /\d+/;
+  const numeroTrovato = stringa.match(regex);
+
+  if (numeroTrovato) {
+    // Convertiamo il numero trovato da stringa a numero intero
+    return parseInt(numeroTrovato[0], 10);
+  } else {
+    // Se non viene trovato nessun numero, restituiamo 0
+    return 0;
+  }
 }

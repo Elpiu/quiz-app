@@ -81,7 +81,7 @@ export function useCtxQuestionsContextForGetChapter(input: string | number){
 
   if (typeof input === 'string') {
     // Cerca il capitolo per nome
-    return chapters.find(chapter => chapter.chapterName === input);
+    return chapters.find(chapter => chapter.id.toString() === input);
   } else if (typeof input === 'number') {
     // Cerca il capitolo per indice
     return chapters[input];
