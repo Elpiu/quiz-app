@@ -1,6 +1,6 @@
-- Va creato un context che carichi tutti i capitoli con le domande 
-- Va creato un githubPages per il deploy statico
-- Componente per visualizzare una singola Domanda
-- Componente per visuallizzare una lista di domande
-- Logica per prendere domande a caso (univocamente)
-- Logica per calcoare numero risposte esatte
+
+
+
+- Altre domande
+
+https://github.com/Ditectrev/Amazon-Web-Services-AWS-Certified-Cloud-Practitioner-CLF-C02-Practice-Tests-Exams-Questions-Answers

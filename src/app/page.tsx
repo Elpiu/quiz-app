@@ -1,32 +1,21 @@
 "use client"
 
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Link from "next/link";
 import {injectIQuestion, injectMainDataContainer} from "@/lib/config/ioc";
 import {useContainer} from "../lib/core/hook/genericHookForBaseContainer";
-import SimpleC from "@/app/components/simpleC";
-import {QuestionContainer} from "@/lib/bean/impl/QuestionContainer";
 import {MainDataContainer} from "@/lib/custom-container/MainDataContainer";
 
 export default function Home() {
 
-  //console.log("Home page Init...")
-  //if (process.env.TRANSLATE){
-  //  await transformData()
-  //}
-  //console.log("Finito")
-  //let chapters = useCtxQuestionsContext()
-
-  // @ts-ignore
-  const { data, getChapter, getNumberOfChapters } = useContainer(MainDataContainer, injectMainDataContainer);
-
+  const { getAllChapter, getNumberOfChapters } = useContainer(MainDataContainer, injectMainDataContainer);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>{getNumberOfChapters()}</h1>
-      <h2>{data.name} ___ {data.n}</h2>
-      <SimpleC></SimpleC>
-      <button className="btn btn-secondary" onClick={increment}>Increment</button>
+      <h1>We Bello Stai nella Home</h1>
+      {getAllChapter().map((chapter: Chapter, index: number) => (
+        <CardChapter key={index} chapter={chapter}></CardChapter>
+      ))}
     </main>
   );
 }

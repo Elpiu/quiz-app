@@ -1,6 +1,6 @@
 import {useEffect, useMemo, useState} from "react";
 import {BaseContainer} from "@/lib/core/container/BaseInteractiveContainer";
-
+import "reflect-metadata";
 
 
 // Interfaccia generica per i metodi del container

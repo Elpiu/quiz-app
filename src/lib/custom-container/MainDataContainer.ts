@@ -1,5 +1,6 @@
 import {injectable} from "inversify";
 import {BaseContainer} from "@/lib/core/container/BaseInteractiveContainer";
+import "reflect-metadata";
 // Importa i tuoi file JSON
 import assessmentTest from '../../../myData/dataJson/Assessment Test.json';
 import chapter1 from '../../../myData/dataJson/Chapter 1.json';
@@ -18,6 +19,7 @@ import chapter12 from '../../../myData/dataJson/Chapter 12.json';
 
 export interface IMainDataContainer {
   getNumberOfChapters(): number
+  getAllChapter(): Chapter[]
   getChapter(input: number | string): Chapter | undefined
 }
 
@@ -39,6 +41,9 @@ export class MainDataContainer extends BaseContainer<MainData> implements IMainD
     this._data = _mainData;
   }
 
+  getAllChapter(): Chapter[] {
+    return this._data.chapters
+  }
 
   getChapter(input: number | string): Chapter | undefined {
     if (typeof input === 'string') {
