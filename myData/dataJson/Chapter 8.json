@@ -1,0 +1,644 @@
+{
+  "id": 8,
+  "chapterName": "Chapter 8",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "When you’re trying to create an S3 bucket named documents, AWS informs you that the bucket name is already in use. What should you do in order to create a bucket?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Use a different region."
+        },
+        {
+          "id_option": "B",
+          "option": "Use a globally unique bucket name."
+        },
+        {
+          "id_option": "C",
+          "option": "Use a different storage class."
+        },
+        {
+          "id_option": "D",
+          "option": "Use a longer name."
+        },
+        {
+          "id_option": "E",
+          "option": "Use a shorter name."
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Bucket names must be globally unique across AWS, regardless of region. The length of the bucket name isn’t an issue since it’s between 3 and 63 characters long. Storage classes are configured on a per-object basis and have no impact on bucket naming."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "Which S3 storage classes are most cost-effective for infrequently accessed data that can’t be easily replaced? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "STANDARD_IA"
+        },
+        {
+          "id_option": "B",
+          "option": "ONEZONE_IA"
+        },
+        {
+          "id_option": "C",
+          "option": "GLACIER"
+        },
+        {
+          "id_option": "D",
+          "option": "STANDARD"
+        },
+        {
+          "id_option": "E",
+          "option": "INTELLIGENT_TIERING"
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "A",
+          " C"
+        ],
+        "explanation": "STANDARD_IA and GLACIER storage classes offer the highest levels of redundancy and are replicated across at least three availability zones. Due to their low level of availability (99.9 and 99.5 percent, respectively), they’re the most cost-effective for infrequently accessed data. ONEZONE_IA stores objects in only one availability zone, so the loss of that zone could result in the loss of all objects. The STANDARD and INTELLIGENT_TIERING classes provide the highest levels of durability and cross-zone replication but are also the least cost-effective for this use case."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "What are the major differences between Simple Storage Service (S3) and Elastic Block Store (EBS)? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "EBS stores volumes."
+        },
+        {
+          "id_option": "B",
+          "option": "EBS stores snapshots."
+        },
+        {
+          "id_option": "C",
+          "option": "S3 stores volumes."
+        },
+        {
+          "id_option": "D",
+          "option": "S3 stores objects."
+        },
+        {
+          "id_option": "E",
+          "option": "EBS stores objects."
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "A",
+          " D"
+        ],
+        "explanation": "S3 is an object storage service, whereas EBS is a block storage service that stores volumes. EBS snapshots are stored in S3. S3 doesn’t store volumes, and EBS doesn’t store objects."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "Which tasks can S3 object life-cycle configurations perform automatically? (Choose three.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Deleting old object versions"
+        },
+        {
+          "id_option": "B",
+          "option": "Moving objects to Glacier"
+        },
+        {
+          "id_option": "C",
+          "option": "Deleting old buckets"
+        },
+        {
+          "id_option": "D",
+          "option": "Deleting old objects"
+        },
+        {
+          "id_option": "E",
+          "option": "Moving objects to an EBS volume"
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "A",
+          " B",
+          " D"
+        ],
+        "explanation": "Object life-cycle configurations can perform transition or expiration actions based on an object’s age. Transition actions can move objects between storage classes, such as between STANDARD and GLACIER. Expiration actions can delete objects and object versions. Object life-cycle configurations can’t delete buckets or move objects to an EBS volume."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "What methods can be used to grant anonymous access to an object in S3? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Bucket policies"
+        },
+        {
+          "id_option": "B",
+          "option": "Access control lists"
+        },
+        {
+          "id_option": "C",
+          "option": "User policies"
+        },
+        {
+          "id_option": "D",
+          "option": "Security groups"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "You can use bucket policies or access control lists (ACLs) to grant anonymous users access to an object in S3. You can’t use user policies to do this, although you can use them to grant IAM principals access to objects. Security groups control access to resources in a virtual private cloud (VPC) and aren’t used to control access to objects in S3."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "Your budget-conscious organization has a 5 TB database file it needs to retain off-site for at least 5 years. In the event the organization needs to access the database, it must be accessible within 8 hours. Which cloud storage options should you recommend, and why? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "S3 has the most durable storage."
+        },
+        {
+          "id_option": "B",
+          "option": "S3."
+        },
+        {
+          "id_option": "C",
+          "option": "S3 Glacier."
+        },
+        {
+          "id_option": "D",
+          "option": "Glacier is the most cost-effective."
+        },
+        {
+          "id_option": "E",
+          "option": "S3 has the fastest retrieval times."
+        },
+        {
+          "id_option": "F",
+          "option": "S3 doesn’t support object sizes greater than 4 TB."
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "C",
+          " D"
+        ],
+        "explanation": "Both S3 and Glacier are designed for durable, long-term storage and offer the same level of durability. Data stored in Glacier can be reliably retrieved within 8 hours using the Expedited or Standard retrieval options. Data stored in S3 can be retrieved even faster than Glacier. S3 can store objects up to 5 TB in size, and Glacier can store archives up to 40 TB. Both S3 or Glacier will meet the given requirements, but Glacier is the more costeffective solution."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "Which of the following actions can you perform from the S3 Glacier service console?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Delete an archive."
+        },
+        {
+          "id_option": "B",
+          "option": "Create a vault."
+        },
+        {
+          "id_option": "C",
+          "option": "Create an archive."
+        },
+        {
+          "id_option": "D",
+          "option": "Delete a bucket."
+        },
+        {
+          "id_option": "E",
+          "option": "Retrieve an archive."
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "You can create or delete vaults from the Glacier service console. You can’t upload, download, or delete archives. To perform archive actions, you must use the AWS Command-Line Interface, an AWS SDK, or a third-party program. Glacier doesn’t use buckets."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "Which Glacier retrieval option generally takes 3 to 5 hours to complete?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Provisioned"
+        },
+        {
+          "id_option": "B",
+          "option": "Expedited"
+        },
+        {
+          "id_option": "C",
+          "option": "Bulk"
+        },
+        {
+          "id_option": "D",
+          "option": "Standard"
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "The Standard retrieval option typically takes 3 to 5 hours to complete. Expedited takes 1 to 5 minutes, and Bulk takes 5 to 12 hours. There is no Provisioned retrieval option, but you can purchase provisioned capacity to ensure Expedited retrievals complete in a timely manner."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "What’s the minimum size for a Glacier archive?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "1 byte"
+        },
+        {
+          "id_option": "B",
+          "option": "40 TB"
+        },
+        {
+          "id_option": "C",
+          "option": "5 TB"
+        },
+        {
+          "id_option": "D",
+          "option": "0 bytes"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "A Glacier archive can be as small as 1 byte and as large as 40 TB. You can’t have a zerobyte archive."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": ")",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Cached gateway"
+        },
+        {
+          "id_option": "B",
+          "option": "Tape gateway"
+        },
+        {
+          "id_option": "C",
+          "option": "File gateway"
+        },
+        {
+          "id_option": "D",
+          "option": "Volume gateway"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "The tape gateway and volume gateway types let you connect to iSCSI storage. The file gateway supports NFS. There’s no such thing as a cached gateway."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "Where does AWS Storage Gateway primarily store data?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Glacier vaults"
+        },
+        {
+          "id_option": "B",
+          "option": "S3 buckets"
+        },
+        {
+          "id_option": "C",
+          "option": "EBS volumes"
+        },
+        {
+          "id_option": "D",
+          "option": "EBS snapshots"
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "All AWS Storage Gateway types—file, volume, and tape gateways—primarily store data in S3 buckets. From there, data can be stored in Glacier or EBS snapshots, which can be instantiated as EBS volumes."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "You need an easy way to transfer files from a server in your data center to S3 without having to install any third-party software. Which of the following services and storage protocols could you use? (Choose four.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AWS Storage Gateway—file gateway"
+        },
+        {
+          "id_option": "B",
+          "option": "iSCSI"
+        },
+        {
+          "id_option": "C",
+          "option": "AWS Snowball"
+        },
+        {
+          "id_option": "D",
+          "option": "SMB"
+        },
+        {
+          "id_option": "E",
+          "option": "AWS Storage Gateway—volume gateway"
+        },
+        {
+          "id_option": "F",
+          "option": "The AWS CLI"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "A",
+          " B",
+          " D",
+          " E"
+        ],
+        "explanation": "The AWS Storage Gateway allows transferring files from on-premises servers to S3 using industry-standard storage protocols. The AWS Storage Gateway functioning as a file gateway supports the SMB and NFS protocols. As a volume gateway, it supports the iSCSI protocol. AWS Snowball and the AWS CLI also provide ways to transfer data to S3, but using them requires installing third-party software."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "Which of the following are true regarding the AWS Storage Gateway volume gateway configuration? (Choose three.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Stored volumes asynchronously back up data to S3 as EBS snapshots."
+        },
+        {
+          "id_option": "B",
+          "option": "Stored volumes can be up to 32 TB in size."
+        },
+        {
+          "id_option": "C",
+          "option": "Cached volumes locally store only a frequently used subset of data."
+        },
+        {
+          "id_option": "D",
+          "option": "Cached volumes asynchronously back up data to S3 as EBS snapshots."
+        },
+        {
+          "id_option": "E",
+          "option": "Cached volumes can be up to 32 TB in size."
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "A",
+          " C",
+          " E"
+        ],
+        "explanation": "The volume gateway type offers two configurations: stored volumes and cached volumes. Stored volumes store all data locally and asynchronously back up that data to S3 as EBS snapshots. Stored volumes can be up to 16 TB in size. In contrast, cached volumes locally store only a frequently used subset of data but do not asynchronously back up the data to S3 as EBS snapshots. Cached volumes can be up to 32 TB in size."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "What’s the most data you can store on a single Snowball device?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "42 TB"
+        },
+        {
+          "id_option": "B",
+          "option": "50 TB"
+        },
+        {
+          "id_option": "C",
+          "option": "72 TB"
+        },
+        {
+          "id_option": "D",
+          "option": "80 TB"
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "The 80 TB Snowball device offers 72 TB of usable storage and is the largest available. The 50 TB Snowball offers 42 TB of usable space."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "Which of the following are security features of AWS Snowball? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It enforces encryption at rest."
+        },
+        {
+          "id_option": "B",
+          "option": "It uses a Trusted Platform Module (TPM) chip."
+        },
+        {
+          "id_option": "C",
+          "option": "It enforces NFS encryption."
+        },
+        {
+          "id_option": "D",
+          "option": "It has tamper-resistant network ports."
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "AWS Snowball enforces encryption at rest and in transit. It also uses a TPM chip to detect unauthorized changes to the hardware or software. Snowball doesn’t use NFS encryption, and it doesn’t have tamper-resistant network ports."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "Which of the following might AWS do after receiving a damaged Snowball device from a customer?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Copy the customer’s data to Glacier."
+        },
+        {
+          "id_option": "B",
+          "option": "Replace the Trusted Platform Module (TPM) chip."
+        },
+        {
+          "id_option": "C",
+          "option": "Securely erase the customer’s data from the device."
+        },
+        {
+          "id_option": "D",
+          "option": "Copy the customer’s data to S3."
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "If AWS detects any signs of tampering or damage, it will not replace the TPM chip or transfer customer data from the device. Instead, AWS will securely erase it."
+      }
+    },
+    {
+      "id_question": 17,
+      "question": "Which of the following can you use to transfer data to AWS Snowball from a Windows machine without writing any code?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "NFS"
+        },
+        {
+          "id_option": "B",
+          "option": "The Snowball Client"
+        },
+        {
+          "id_option": "C",
+          "option": "iSCSI"
+        },
+        {
+          "id_option": "D",
+          "option": "SMB"
+        },
+        {
+          "id_option": "E",
+          "option": "The S3 SDK Adapter for Snowball"
+        }
+      ],
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The Snowball Client lets you transfer files to or from a Snowball using a machine running Windows, Linux, or macOS. It requires no coding knowledge, but the S3 SDK Adapter for Snowball does. Snowball doesn’t support the NFS, iSCSI, or SMB storage protocols."
+      }
+    },
+    {
+      "id_question": 18,
+      "question": "How do the AWS Snowball and Snowball Edge devices differ? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Snowball Edge supports copying files using NFS."
+        },
+        {
+          "id_option": "B",
+          "option": "Snowball devices can be clustered together for storage."
+        },
+        {
+          "id_option": "C",
+          "option": "Snowball’s QSFP+ network interface supports speeds up to 40 Gbps."
+        },
+        {
+          "id_option": "D",
+          "option": "Snowball Edge can run EC2 instances."
+        }
+      ],
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "Snowball Edge offers compute power to run EC2 instances and supports copying files using the NFSv3 and NFSv4 protocols. Snowball devices can’t be clustered and don’t have a QFSP+ port."
+      }
+    },
+    {
+      "id_question": 19,
+      "question": "Which of the following Snowball Edge device options is the best for running machine learning applications?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Compute Optimized"
+        },
+        {
+          "id_option": "B",
+          "option": "Compute Optimized with GPU"
+        },
+        {
+          "id_option": "C",
+          "option": "Storage Optimized"
+        },
+        {
+          "id_option": "D",
+          "option": "Network Optimized"
+        }
+      ],
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The Snowball Edge Compute Optimized with GPU option is optimized for machine learning and high-performance computing applications. Although the Compute Optimized and Storage Optimized options could work, they aren’t the best choices. There’s no Network Optimized option."
+      }
+    },
+    {
+      "id_question": 20,
+      "question": "Which of the following hardware devices offers a network interface speed that supports up to 100 Gbps?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Snowball Edge with the Storage Optimized configuration"
+        },
+        {
+          "id_option": "B",
+          "option": "Snowball Edge with the Compute Optimized configuration"
+        },
+        {
+          "id_option": "C",
+          "option": "Storage Gateway"
+        },
+        {
+          "id_option": "D",
+          "option": "80 TB Snowball"
+        }
+      ],
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Snowball Edge with the Compute Optimized configuration includes a QSFP+ network interface that supports up to 100 Gbps. The Storage Optimized configuration has a QSFP+ port that supports only up to 40 Gbps. The 80 TB Snowball supports only up to 10 Gbps. A storage gateway is a virtual machine, not a hardware device."
+      }
+    }
+  ]
+}

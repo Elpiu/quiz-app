@@ -1,0 +1,596 @@
+{
+  "id": 10,
+  "chapterName": "Chapter 10",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which of the following are true of a default VPC? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A default VPC spans multiple regions."
+        },
+        {
+          "id_option": "B",
+          "option": "AWS creates a default VPC in each region."
+        },
+        {
+          "id_option": "C",
+          "option": "AWS creates a default VPC in each availability zone."
+        },
+        {
+          "id_option": "D",
+          "option": "By default, each default VPC is available to one AWS account."
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "For each account, AWS creates a default VPC in each region. A VPC spans all availability within a region. VPCs do not span regions."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "Which of the following is a valid CIDR for a VPC or subnet?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "10.0.0.0/28"
+        },
+        {
+          "id_option": "B",
+          "option": "10.0.0.0/29"
+        },
+        {
+          "id_option": "C",
+          "option": "10.0.0.0/8"
+        },
+        {
+          "id_option": "D",
+          "option": "10.0.0.0/15"
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "A VPC or subnet CIDR can have a size between /16 and /28 inclusive, so 10.0.0.0/28 would be the only valid CIDR."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "Which of the following are true regarding subnets? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A VPC must have at least two subnets."
+        },
+        {
+          "id_option": "B",
+          "option": "A subnet must have a CIDR that’s a subset of the CIDR of the VPC in which it resides."
+        },
+        {
+          "id_option": "C",
+          "option": "A subnet spans one availability zone."
+        },
+        {
+          "id_option": "D",
+          "option": "A subnet spans multiple availability zones."
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "B",
+          " C"
+        ],
+        "explanation": "A subnet exists in only one availability zone, and it must have a CIDR that’s a subset of CIDR of the VPC in which it resides. There’s no requirement for a VPC to have two subnets, but it must have at least one."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "Which of the following is true of a new security group?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It contains an inbound rule denying access from public IP addresses."
+        },
+        {
+          "id_option": "B",
+          "option": "It contains an outbound rule denying access to public IP addresses."
+        },
+        {
+          "id_option": "C",
+          "option": "It contains an outbound rule allowing access to any IP address."
+        },
+        {
+          "id_option": "D",
+          "option": "It contains an inbound rule allowing access from any IP address."
+        },
+        {
+          "id_option": "E",
+          "option": "It contains an inbound rule denying access from any IP address."
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "When you create a security group, it contains an outbound rule that allows access to any IP address. It doesn’t contain an inbound rule by default. Security group rules can only permit access, not deny it, so any traffic not explicitly allowed will be denied."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "What’s the difference between a security group and a network access control list (NACL)? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A network access control list operates at the instance level."
+        },
+        {
+          "id_option": "B",
+          "option": "A security group operates at the instance level."
+        },
+        {
+          "id_option": "C",
+          "option": "A security group operates at the subnet level."
+        },
+        {
+          "id_option": "D",
+          "option": "A network access control list operates at the subnet level."
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "A network access control list is a firewall that operates at the subnet level. A security group is a firewall that operates at the instance level."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "Which of the following is true of a VPC peering connection?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It’s a private connection that connects more than three VPCs."
+        },
+        {
+          "id_option": "B",
+          "option": "It’s a private connection between two VPCs."
+        },
+        {
+          "id_option": "C",
+          "option": "It’s a public connection between two VPCs."
+        },
+        {
+          "id_option": "D",
+          "option": "It’s a virtual private network (VPN) connection between two VPCs."
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A VPC peering connection is a private connection between only two VPCs. It uses the private AWS network, and not the public Internet. A VPC peering connection is different than a VPN connection."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "What are two differences between a virtual private network (VPN) connection and a Direct Connect connection? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A Direct Connect connection offers predictable latency because it doesn’t traverse the Internet."
+        },
+        {
+          "id_option": "B",
+          "option": "A VPN connection uses the Internet for transport."
+        },
+        {
+          "id_option": "C",
+          "option": "A Direct Connect connection uses AES 128- or 256-bit encryption."
+        },
+        {
+          "id_option": "D",
+          "option": "A VPN connection requires proprietary hardware."
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "A Direct Connect link uses a dedicated link rather than the Internet to provide predictable latency. Direct Connect doesn’t use encryption but provides some security by means of a private link. A VPN connection uses the Internet for transport, encrypting data with AES 128- or 256-bit encryption. A VPN connection doesn’t require proprietary hardware."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "Which of the following are true about registering a domain name with Route 53? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The registrar you use to register a domain name determines who will host DNS for that domain."
+        },
+        {
+          "id_option": "B",
+          "option": "You can register a domain name for a term of up to 10 years."
+        },
+        {
+          "id_option": "C",
+          "option": "Route 53 creates a private hosted zone for the domain."
+        },
+        {
+          "id_option": "D",
+          "option": "Route 53 creates a public hosted zone for the domain."
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "When you register a domain name, you can choose a term between 1 year and 10 years. If you use Route 53, it will automatically create a public hosted zone for the domain. The registrar and DNS hosting provider don’t have to be the same entity, but often are."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "Which of the following Route 53 routing policies can return a set of randomly ordered values?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Simple"
+        },
+        {
+          "id_option": "B",
+          "option": "Multivalue Answer"
+        },
+        {
+          "id_option": "C",
+          "option": "Failover"
+        },
+        {
+          "id_option": "D",
+          "option": "Latency"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A Multivalue Answer routing policy can return a set of multiple values, sorted randomly. A simple routing policy returns a single value. A Failover routing policy always routes users to the primary resource unless it’s down, in which case it routes users to the secondary resource. A Latency routing policy sends users to the resource in the AWS region that provides the least latency."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "Which of the following Route 53 routing policies doesn’t use health checks?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Latency"
+        },
+        {
+          "id_option": "B",
+          "option": "Multivalue Answer"
+        },
+        {
+          "id_option": "C",
+          "option": "Simple"
+        },
+        {
+          "id_option": "D",
+          "option": "Geolocation"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "All Route 53 routing policies except for Simple can use health checks."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "Which of the following types of Route 53 health checks works by making a test connection to a TCP port?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Simple"
+        },
+        {
+          "id_option": "B",
+          "option": "CloudWatch alarm"
+        },
+        {
+          "id_option": "C",
+          "option": "Endpoint"
+        },
+        {
+          "id_option": "D",
+          "option": "Calculated"
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "An Endpoint health check works by connecting to the monitored endpoint via HTTP, HTTPS, or TCP. A CloudWatch alarm health check simply reflects the status of a CloudWatch alarm. A Calculated health check derives its status from multiple other health checks. There is no such thing as a Simple health check."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "You have two EC2 instances hosting a web application. You want to distribute 20 percent of traffic to one instance and 80 percent to the other. Which of the following Route 53 routing policies should you use?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Weighted"
+        },
+        {
+          "id_option": "B",
+          "option": "Failover"
+        },
+        {
+          "id_option": "C",
+          "option": "Multivalue Answer"
+        },
+        {
+          "id_option": "D",
+          "option": "Simple"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "A Weighted routing policy lets you distribute traffic to endpoints according to a ratio that you define. None of the other routing policies allows this."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "Resources in a VPC need to be able to resolve internal IP addresses for other resources in the VPC. No one outside of the VPC should be able to resolve these addresses. Which of the following Route 53 resources can help you achieve this?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A public hosted zone"
+        },
+        {
+          "id_option": "B",
+          "option": "A private hosted zone"
+        },
+        {
+          "id_option": "C",
+          "option": "Domain name registration"
+        },
+        {
+          "id_option": "D",
+          "option": "Health checks"
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A private hosted zone is associated with a VPC and allows resources in the VPC to resolve private domain names. A public hosted zone is accessible by anyone on the Internet. Domain name registration is for public domain names. Health checks aren’t necessary for name resolution to work."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "You want to provide private name resolution for two VPCs using the domain name company.pri. How many private hosted zones do you need to create?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "1"
+        },
+        {
+          "id_option": "B",
+          "option": "2"
+        },
+        {
+          "id_option": "C",
+          "option": "3"
+        },
+        {
+          "id_option": "D",
+          "option": "4"
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Route 53 private hosted zones provide DNS resolution for a single domain name within multiple VPCs. Therefore, to support resolution of one domain name for two VPCs, you’d need one private hosted zone."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "On how many continents are CloudFront edge locations distributed?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "7"
+        },
+        {
+          "id_option": "B",
+          "option": "6"
+        },
+        {
+          "id_option": "C",
+          "option": "5"
+        },
+        {
+          "id_option": "D",
+          "option": "4"
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "CloudFront has edge locations on six continents (Antarctica is a hard place to get to)."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "From where does CloudFront retrieve content to store for caching?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Regions"
+        },
+        {
+          "id_option": "B",
+          "option": "Origins"
+        },
+        {
+          "id_option": "C",
+          "option": "Distributions"
+        },
+        {
+          "id_option": "D",
+          "option": "Edge locations"
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A CloudFront origin is the location that a distribution sources content from. Content is stored in edge locations. A distribution defines the edge locations and origins to use."
+      }
+    },
+    {
+      "id_question": 17,
+      "question": "Which CloudFront distribution type requires you to provide a media player?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Streaming"
+        },
+        {
+          "id_option": "B",
+          "option": "RTMP"
+        },
+        {
+          "id_option": "C",
+          "option": "Web"
+        },
+        {
+          "id_option": "D",
+          "option": "Edge"
+        }
+      ],
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The RTMP distribution type is for delivering streaming content and requires you to provide a media player. A Web distribution can also stream audio or video content but doesn’t require you to provide a media player. Streaming and Edge are not distribution types."
+      }
+    },
+    {
+      "id_question": 18,
+      "question": "You need to deliver content to users in the United States and Canada. Which of the following edge location options will be the most cost-effective for your CloudFront distribution?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "United States, Canada, and Europe"
+        },
+        {
+          "id_option": "B",
+          "option": "United States, Canada, Europe, and Asia"
+        },
+        {
+          "id_option": "C",
+          "option": "United States, Canada, Europe, Asia, and Africa"
+        },
+        {
+          "id_option": "D",
+          "option": "All edge locations"
+        }
+      ],
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "The more edge locations you use for a distribution, the more you’ll pay. Selecting the minimum number of locations will be the most cost-effective."
+      }
+    },
+    {
+      "id_question": 19,
+      "question": "Approximately how many different CloudFront edge locations are there?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "About 50"
+        },
+        {
+          "id_option": "B",
+          "option": "More than 150"
+        },
+        {
+          "id_option": "C",
+          "option": "More than 300"
+        },
+        {
+          "id_option": "D",
+          "option": "More than 500"
+        }
+      ],
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "There are more than 150 edge locations throughout the world."
+      }
+    },
+    {
+      "id_question": 20,
+      "question": "Which of the following are valid origins for a CloudFront distribution? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "EC2 instance"
+        },
+        {
+          "id_option": "B",
+          "option": "A public S3 bucket"
+        },
+        {
+          "id_option": "C",
+          "option": "A private S3 bucket that you don’t have access to"
+        },
+        {
+          "id_option": "D",
+          "option": "A private S3 bucket that you own"
+        }
+      ],
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "An origin can be an EC2 instance or a public S3 bucket. You can’t use a private S3 bucket as an origin."
+      }
+    }
+  ]
+}

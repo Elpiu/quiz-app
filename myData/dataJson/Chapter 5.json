@@ -1,0 +1,592 @@
+{
+  "id": 5,
+  "chapterName": "Chapter 5",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "What is the primary function of the AWS IAM service?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Identity and access management"
+        },
+        {
+          "id_option": "B",
+          "option": "Access key management"
+        },
+        {
+          "id_option": "C",
+          "option": "SSH key pair management"
+        },
+        {
+          "id_option": "D",
+          "option": "Federated access management"
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Identity and Access Management (IAM) is primarily focused on helping you control access to your AWS resources. KMS handles access keys. EC2 manages SSH key pairs. While IAM does touch on federated management, that’s not its primary purpose."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "Which of the following are requirements you can include in an IAM password policy? (Choose three.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Require at least one uppercase letter."
+        },
+        {
+          "id_option": "B",
+          "option": "Require at least one number."
+        },
+        {
+          "id_option": "C",
+          "option": "Require at least one space or null character."
+        },
+        {
+          "id_option": "D",
+          "option": "Require at least one nonalphanumeric character."
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "A",
+          " B",
+          " D"
+        ],
+        "explanation": "Including a space or null character is not a password policy option."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "Which of the following should you do to secure your AWS root user? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Assign the root user to the “admins” IAM group."
+        },
+        {
+          "id_option": "B",
+          "option": "Use the root user for day-to-day administration tasks."
+        },
+        {
+          "id_option": "C",
+          "option": "Enable MFA."
+        },
+        {
+          "id_option": "D",
+          "option": "Create a strong password."
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "C",
+          " D"
+        ],
+        "explanation": "The root user should not be used for day-to-day administration tasks—even as part of an “admin” group. The goal is to protect root as much as possible."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "How does multifactor authentication work?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Instead of an access password, users authenticate via a physical MFA device."
+        },
+        {
+          "id_option": "B",
+          "option": "In addition to an access password, users also authenticate via a physical MFA device."
+        },
+        {
+          "id_option": "C",
+          "option": "Users authenticate using tokens sent to at least two MFA devices."
+        },
+        {
+          "id_option": "D",
+          "option": "Users authenticate using a password and also either a physical or virtual MFA device."
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "MFA requires at least two (“multi”) authentication methods. Those will normally include a password (something you know) and a token sent to either a virtual or a physical MFA device (something you have)."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "Which of the following SSH commands will successfully connect to an EC2 Amazon Linux instance with an IP address of 54.7.35.103 using a key named mykey.pem?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "echo \"mykey.pem ubuntu@54.7.35.103\" | ssh -i"
+        },
+        {
+          "id_option": "B",
+          "option": "ssh -i mykey.pem ec2-user@54.7.35.103"
+        },
+        {
+          "id_option": "C",
+          "option": "ssh -i mykey.pem@54.7.35.103"
+        },
+        {
+          "id_option": "D",
+          "option": "ssh ec2-user@mykey.pem:54.7.35.103 -i"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The -i argument should point to the name (and location) of the key stored on the local (client) machine. By default, the admin user on an Amazon Linux instance is named ec2-user."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "What’s the most efficient method for managing permissions for multiple IAM users?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Assign users requiring similar permissions to IAM roles."
+        },
+        {
+          "id_option": "B",
+          "option": "Assign users requiring similar permissions to IAM groups."
+        },
+        {
+          "id_option": "C",
+          "option": "Assign IAM users permissions common to others with similar administration responsibilities."
+        },
+        {
+          "id_option": "D",
+          "option": "Create roles based on IAM policies and assign them to IAM users."
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "While assigning permissions and policy-based roles will work, it’s not nearly as efficient as using groups, where you need to set or update permissions only once for multiple users."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "What is an IAM role?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A set of permissions allowing access to specified AWS resources"
+        },
+        {
+          "id_option": "B",
+          "option": "A set of IAM users given permission to access specified AWS resources"
+        },
+        {
+          "id_option": "C",
+          "option": "Permissions granted a trusted entity over specified AWS resources"
+        },
+        {
+          "id_option": "D",
+          "option": "Permissions granted an IAM user over specified AWS resources"
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "An IAM role is meant to be assigned to a trusted entity (like another AWS service or a federated identity). A “set of permissions” could refer to a policy. A set of IAM users could describe a group."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "How can federated identities be incorporated into AWS workflows? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "You can provide users authenticated through a third-party identity provider access to backend resources used by your mobile app."
+        },
+        {
+          "id_option": "B",
+          "option": "You can use identities to guide your infrastructure design decisions."
+        },
+        {
+          "id_option": "C",
+          "option": "You can use authenticated identities to import external data (like email records from Gmail) into AWS databases."
+        },
+        {
+          "id_option": "D",
+          "option": "You can provide admins authenticated through AWS Microsoft AD with access to a Microsoft SharePoint farm running on AWS."
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "A",
+          " D"
+        ],
+        "explanation": "Federated identities are for permitting authenticated entities access to AWS resources and data. They’re not for importing anything from external accounts—neither data nor guidance."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "Which of the following are valid third-party federated identity standards? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Secure Shell"
+        },
+        {
+          "id_option": "B",
+          "option": "SSO"
+        },
+        {
+          "id_option": "C",
+          "option": "SAML 2.0"
+        },
+        {
+          "id_option": "D",
+          "option": "Active Directory"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "C",
+          " D"
+        ],
+        "explanation": "Secure Shell (SSH) is an encrypted remote connectivity protocol, and SSO (single signon) is an interface feature—neither is a standard for federated identities."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "What information does the IAM credential report provide?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A record of API requests against your account resources"
+        },
+        {
+          "id_option": "B",
+          "option": "A record of failed password account login attempts"
+        },
+        {
+          "id_option": "C",
+          "option": "The current state of your account security settings"
+        },
+        {
+          "id_option": "D",
+          "option": "The current state of security of your IAM users’ access credentials"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "The credential report focuses only on your users’ passwords, access keys, and MFA status. It doesn’t cover actual activities or general security settings."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "What text format does the credential report use?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "JSON"
+        },
+        {
+          "id_option": "B",
+          "option": "CSV"
+        },
+        {
+          "id_option": "C",
+          "option": "ASCII"
+        },
+        {
+          "id_option": "D",
+          "option": "XML"
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The credential report is saved to the comma-separated values (spreadsheet) format."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "Which of the following IAM policies is the best choice for the admin user you create in order to replace the root user for day-to-day administration tasks?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AdministratorAccess"
+        },
+        {
+          "id_option": "B",
+          "option": "AmazonS3FullAccess"
+        },
+        {
+          "id_option": "C",
+          "option": "AmazonEC2FullAccess"
+        },
+        {
+          "id_option": "D",
+          "option": "AdminAccess"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Your admin user will need broad access to be effective, so AmazonS3FullAccess and AmazonEC2FullAccess—which open up only S3 and EC2, respectively—won’t be enough. There is no AdminAccess policy."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "What will you need to provide for a new IAM user you’re creating who will use “programmatic access” to AWS resources?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A password"
+        },
+        {
+          "id_option": "B",
+          "option": "A password and MFA"
+        },
+        {
+          "id_option": "C",
+          "option": "An access key ID"
+        },
+        {
+          "id_option": "D",
+          "option": "An access key ID and secret access key"
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "“Programmatic access” users don’t sign in through the AWS Management Console; they access through APIs or the AWS CLI. They would therefore not need passwords or MFA. An access key ID alone without a matching secret access key is worthless."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "What will IAM users with AWS Management Console access need to successfully log in?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Their username, account number, and a password"
+        },
+        {
+          "id_option": "B",
+          "option": "Their username and password"
+        },
+        {
+          "id_option": "C",
+          "option": "Their account number and secret access key"
+        },
+        {
+          "id_option": "D",
+          "option": "Their username, password, and secret access key"
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "When the correct login page (such as https://291976716973.signin.aws.amazon.com/console) is loaded, an IAM user only needs to enter a username and a valid password. Account numbers and secret access keys are not used for this kind of authentication."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "Which of the following will encrypt your data while in transit between your office and Amazon S3?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "DynamoDB"
+        },
+        {
+          "id_option": "B",
+          "option": "SSE-S3"
+        },
+        {
+          "id_option": "C",
+          "option": "A client-side master key"
+        },
+        {
+          "id_option": "D",
+          "option": "SSE-KMS"
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "In-transit encryption requires that the data be encrypted on the remote client before uploading. Server-side encryption (either SSE-S3 or SSE-KMS) only encrypts data within S3 buckets. DynamoDB is a NoSQL database service."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "Which of the following AWS resources cannot be encrypted using KMS?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Existing AWS Elastic Block Store volumes"
+        },
+        {
+          "id_option": "B",
+          "option": "RDS databases"
+        },
+        {
+          "id_option": "C",
+          "option": "S3 buckets"
+        },
+        {
+          "id_option": "D",
+          "option": "DynamoDB databases"
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "You can only encrypt an EBS volume at creation, not later."
+      }
+    },
+    {
+      "id_question": 17,
+      "question": "What does KMS use to encrypt objects stored on your AWS account?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "SSH master key"
+        },
+        {
+          "id_option": "B",
+          "option": "KMS master key"
+        },
+        {
+          "id_option": "C",
+          "option": "Client-side master key"
+        },
+        {
+          "id_option": "D",
+          "option": "Customer master key"
+        }
+      ],
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "A client-side master key is used to encrypt objects before they reach AWS (specifically S3). There are no keys commonly known as either SSH or KMS master keys."
+      }
+    },
+    {
+      "id_question": 18,
+      "question": "Which of the following standards governs AWS-based applications processing credit card transactions?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "SSE-KMS"
+        },
+        {
+          "id_option": "B",
+          "option": "FedRAMP"
+        },
+        {
+          "id_option": "C",
+          "option": "PCI DSS"
+        },
+        {
+          "id_option": "D",
+          "option": "ARPA"
+        }
+      ],
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "SSE-KMS are KMS-managed server-side keys. FedRAMP is the U.S. government’s Federal Risk and Authorization Management Program (within which transaction data protection plays only a relatively minor role). ARPA is the Australian Prudential Regulation Authority."
+      }
+    },
+    {
+      "id_question": 19,
+      "question": "What is the purpose of the Service Organization Controls (SOC) reports found on AWS Artifact?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "They can be used to help you design secure and reliable credit card transaction applications."
+        },
+        {
+          "id_option": "B",
+          "option": "They attest to AWS infrastructure compliance with data accountability standards like Sarbanes–Oxley."
+        },
+        {
+          "id_option": "C",
+          "option": "They guarantee that all AWS-based applications are, by default, compliant with Sarbanes–Oxley standards."
+        },
+        {
+          "id_option": "D",
+          "option": "They’re an official, ongoing risk-assessment profiler for AWS-based deployments."
+        }
+      ],
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "SOC isn’t primarily about guidance or risk assessment, and it’s definitely not a guarantee of the state of your own deployments. SOC reports are reports of audits on AWS infrastructure that you can use as part of your own reporting requirements."
+      }
+    },
+    {
+      "id_question": 20,
+      "question": "What role can the documents provided by AWS Artifact play in your application planning? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "They can help you confirm that your deployment infrastructure is compliant with regulatory standards."
+        },
+        {
+          "id_option": "B",
+          "option": "They can provide insight into various regulatory and industry standards that represent best practices."
+        },
+        {
+          "id_option": "C",
+          "option": "They can provide insight into the networking and storage design patterns your AWS applications use."
+        },
+        {
+          "id_option": "D",
+          "option": "They represent AWS infrastructure design policy."
+        }
+      ],
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "AWS Artifact documents are about AWS infrastructure compliance with external standards. They tangentially can also provide insight into best practices. They do not represent internal AWS design or policies."
+      }
+    }
+  ]
+}

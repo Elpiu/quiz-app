@@ -1,0 +1,611 @@
+{
+  "id": 9,
+  "chapterName": "Chapter 9",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which type of database stores data in columns and rows?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Nonrelational"
+        },
+        {
+          "id_option": "B",
+          "option": "Relational"
+        },
+        {
+          "id_option": "C",
+          "option": "Key-value store"
+        },
+        {
+          "id_option": "D",
+          "option": "Document"
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A relational database stores data in columns called attributes and rows called records. Nonrelational databases—including key-value stores and document stores—store data in collections or items but don’t use columns or rows."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "Which of the following Structured Query Language (SQL) statements can you use to write data to a relational database table?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "CREATE"
+        },
+        {
+          "id_option": "B",
+          "option": "INSERT"
+        },
+        {
+          "id_option": "C",
+          "option": "QUERY"
+        },
+        {
+          "id_option": "D",
+          "option": "WRITE"
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The SQL INSERT statement can be used to add data to a relational database. The QUERY command is used to read data. CREATE can be used to create a table but not add data to it. WRITE is not a valid SQL command."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "Which of the following statements is true regarding nonrelational databases?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "You can create only one table."
+        },
+        {
+          "id_option": "B",
+          "option": "No primary key is required."
+        },
+        {
+          "id_option": "C",
+          "option": "You can’t store data with a fixed structure."
+        },
+        {
+          "id_option": "D",
+          "option": "You don’t have to define all the types of data that a table can store before adding data to it."
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "A nonrelational database is schemaless, meaning that there’s no need to predefine all the types of data you’ll store in a table. This doesn’t preclude you from storing data with a fixed structure, as nonrelational databases can store virtually any kind of data. A primary key is required to uniquely identify each item in a table. Creating multiple tables is allowed, but most applications that use nonrelational databases use only one table."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "What is a no-SQL database?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A nonrelational database without primary keys"
+        },
+        {
+          "id_option": "B",
+          "option": "A schemaless relational database"
+        },
+        {
+          "id_option": "C",
+          "option": "A schemaless nonrelational database"
+        },
+        {
+          "id_option": "D",
+          "option": "A relational database with primary keys"
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "A no-SQL database is another term for a nonrelational database. By definition, nonrelational databases are schemaless and must use primary keys. There’s no such thing as a schemaless relational database. No-SQL is never used to describe a relational database of any kind."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "What do new Relational Database Service (RDS) instances use for database storage?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Instance volumes"
+        },
+        {
+          "id_option": "B",
+          "option": "Elastic Block Store (EBS) volumes"
+        },
+        {
+          "id_option": "C",
+          "option": "Snapshots"
+        },
+        {
+          "id_option": "D",
+          "option": "Magnetic storage"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "RDS instances use EBS volumes for storage. They no longer can use magnetic storage. Instance volumes are for temporary, not database storage. You can take a snapshot of a database instance and restore it to a new instance with a new EBS volume, but an RDS instance can’t use a snapshot directly for database storage."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "Which of the following are database engine options for Amazon Relational Database Service (RDS)? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "IBM dBase"
+        },
+        {
+          "id_option": "B",
+          "option": "PostgreSQL"
+        },
+        {
+          "id_option": "C",
+          "option": "DynamoDB"
+        },
+        {
+          "id_option": "D",
+          "option": "Amazon Aurora"
+        },
+        {
+          "id_option": "E",
+          "option": "Redis"
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "PostgreSQL and Amazon Aurora are options for RDS database engines. IBM dBase and the nonrelational databases DynamoDB and Redis are not available as RDS database engines."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "What two databases is Amazon Aurora compatible with? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "MySQL"
+        },
+        {
+          "id_option": "B",
+          "option": "PostgreSQL"
+        },
+        {
+          "id_option": "C",
+          "option": "MariaDB"
+        },
+        {
+          "id_option": "D",
+          "option": "Oracle"
+        },
+        {
+          "id_option": "E",
+          "option": "Microsoft SQL Server"
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "Aurora is Amazon’s proprietary database engine that works with existing PostgreSQL and MySQL databases. Aurora doesn’t support MariaDB, Oracle, or Microsoft SQL Server."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "Which of the following features of Relational Database Service (RDS) can prevent data loss in the event of an availability zone failure? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Read replicas"
+        },
+        {
+          "id_option": "B",
+          "option": "Multi-AZ"
+        },
+        {
+          "id_option": "C",
+          "option": "Snapshots"
+        },
+        {
+          "id_option": "D",
+          "option": "IOPS"
+        },
+        {
+          "id_option": "E",
+          "option": "Vertical scaling"
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "B",
+          " C"
+        ],
+        "explanation": "Multi-AZ and snapshots can protect your data in the event of an availability zone failure. Read replicas don’t use synchronous replication and may lose some data. IOPS is a measurement of storage throughput. Vertical scaling refers to changing the instance class but has nothing to do with preventing data loss."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "Which RDS database engine offers automatically expanding database storage up to 64 TB?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Microsoft SQL Server"
+        },
+        {
+          "id_option": "B",
+          "option": "Amazon Aurora"
+        },
+        {
+          "id_option": "C",
+          "option": "Oracle"
+        },
+        {
+          "id_option": "D",
+          "option": "Amazon Athena"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Amazon Aurora uses a shared storage volume that automatically expands up to 64 TB. The Microsoft SQL Server and Oracle database engines don’t offer this. Amazon Athena is not a database engine."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "Which of the following Relational Database Service (RDS) features can help you achieve a monthly availability of 99.95 percent?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Multi-AZ"
+        },
+        {
+          "id_option": "B",
+          "option": "Read replicas"
+        },
+        {
+          "id_option": "C",
+          "option": "Point-in-time recovery"
+        },
+        {
+          "id_option": "D",
+          "option": "Horizontal scaling"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Multi-AZ lets your database withstand the failure of an RDS instance, even if the failure is due to an entire availability zone failing. Read replicas are a way to achieve horizontal scaling to improve performance of database reads but don’t increase availability. Point-intime recovery allows you to restore a database up to a point in time but doesn’t increase availability."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "What is true regarding a DynamoDB partition? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It’s stored within a table."
+        },
+        {
+          "id_option": "B",
+          "option": "It’s backed by solid-state drives."
+        },
+        {
+          "id_option": "C",
+          "option": "It’s a way to uniquely identify an item in a table."
+        },
+        {
+          "id_option": "D",
+          "option": "It’s replicated across multiple availability zones."
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "A partition is an allocation of storage backed by solid-state drives and replicated across multiple availability zones. Tables are stored across partitions, but tables do not contain partitions. A primary key, not a partition, is used to uniquely identify an item in a table."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "What is the minimum monthly availability for DynamoDB in a single region?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "99.99 percent"
+        },
+        {
+          "id_option": "B",
+          "option": "99.95 percent"
+        },
+        {
+          "id_option": "C",
+          "option": "99.9 percent"
+        },
+        {
+          "id_option": "D",
+          "option": "99.0 percent"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "The minimum monthly availability for DynamoDB is 99.99 percent in a single region. It’s not 99.95 percent, 99.9 percent, or 99.0 percent."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "Which of the following statements is true regarding a DynamoDB table?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It can store only one data type."
+        },
+        {
+          "id_option": "B",
+          "option": "When you create a table, you must define the maximum number of items that it can store."
+        },
+        {
+          "id_option": "C",
+          "option": "Items in a table can have duplicate values for the primary key."
+        },
+        {
+          "id_option": "D",
+          "option": "Items in a table don’t have to have all the same attributes."
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "Items in a DynamoDB table can have different attributes. For example, one item can have five attributes, while another has only one. A table can store items containing multiple data types. There’s no need to predefine the number of items in a table. Items in a table can’t have duplicate primary keys."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "Which configuration parameters can you adjust to improve write performance against a DynamoDB table? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Decrease read capacity units (RCU)."
+        },
+        {
+          "id_option": "B",
+          "option": "Increase read capacity units."
+        },
+        {
+          "id_option": "C",
+          "option": "Increase write capacity units (WCU)."
+        },
+        {
+          "id_option": "D",
+          "option": "Decrease write capacity units."
+        },
+        {
+          "id_option": "E",
+          "option": "Enable DynamoDB Auto Scaling."
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "C",
+          " E"
+        ],
+        "explanation": "Increasing WCU or enabling Auto Scaling will improve write performance against a table. Increasing or decreasing RCU won’t improve performance for writes. Decreasing WCU will make write performance worse."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "Which DynamoDB operation is the most read-intensive?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Write"
+        },
+        {
+          "id_option": "B",
+          "option": "Query"
+        },
+        {
+          "id_option": "C",
+          "option": "Scan"
+        },
+        {
+          "id_option": "D",
+          "option": "Update"
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "A scan requires reading every partition on which the table is stored. A query occurs against the primary key, enabling DynamoDB to read only the partition where the matching item is stored. Writing and updating an item are not read-intensive operations."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "Which of the following would be appropriate to use for a primary key in a DynamoDB table that stores a customer list?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The customer’s full name"
+        },
+        {
+          "id_option": "B",
+          "option": "The customer’s phone number"
+        },
+        {
+          "id_option": "C",
+          "option": "The customer’s city"
+        },
+        {
+          "id_option": "D",
+          "option": "A randomly generated customer ID number"
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "A primary key must be unique within a table. A full name, phone number, or city may not be unique, as some customers may share the same name or phone number. A randomly generated customer ID number would be unique and appropriate for use as a primary key."
+      }
+    },
+    {
+      "id_question": 17,
+      "question": "Which type of Redshift node uses magnetic storage?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Cost-optimized"
+        },
+        {
+          "id_option": "B",
+          "option": "Dense compute"
+        },
+        {
+          "id_option": "C",
+          "option": "Dense storage"
+        },
+        {
+          "id_option": "D",
+          "option": "Dense memory"
+        }
+      ],
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Dense compute nodes use magnetic disks. Dense storage nodes use SSDs. There are no such nodes as dense memory or cost-optimized."
+      }
+    },
+    {
+      "id_question": 18,
+      "question": "Which Redshift feature can analyze structured data stored in S3?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Redshift Spectrum"
+        },
+        {
+          "id_option": "B",
+          "option": "Redshift S3"
+        },
+        {
+          "id_option": "C",
+          "option": "Amazon Athena"
+        },
+        {
+          "id_option": "D",
+          "option": "Amazon RDS"
+        }
+      ],
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Redshift Spectrum can analyze structured data stored in S3. There is no such service as Redshift S3. Amazon Athena can analyze structured data in S3, but it’s not a feature of Redshift. Amazon RDS doesn’t analyze data stored in S3."
+      }
+    },
+    {
+      "id_question": 19,
+      "question": "What is the term for a relational database that stores large amounts of structured data from a variety of sources for reporting and analysis?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Data storehouse"
+        },
+        {
+          "id_option": "B",
+          "option": "Data warehouse"
+        },
+        {
+          "id_option": "C",
+          "option": "Report cluster"
+        },
+        {
+          "id_option": "D",
+          "option": "Dense storage node"
+        }
+      ],
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A data warehouse stores large amounts of structured data from other relational databases. It’s not called a data storehouse or a report cluster. Dense storage node is a type of Redshift compute node."
+      }
+    },
+    {
+      "id_question": 20,
+      "question": "What’s the maximum amount of data you can store in a Redshift cluster when using dense storage nodes?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "2 PB"
+        },
+        {
+          "id_option": "B",
+          "option": "326 TB"
+        },
+        {
+          "id_option": "C",
+          "option": "2 TB"
+        },
+        {
+          "id_option": "D",
+          "option": "326 PB"
+        },
+        {
+          "id_option": "E",
+          "option": "236 TB"
+        }
+      ],
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Dense storage nodes can be used in a cluster to store up to 2 PB of data. Dense compute nodes can be used to store up to 326 TB of data."
+      }
+    }
+  ]
+}

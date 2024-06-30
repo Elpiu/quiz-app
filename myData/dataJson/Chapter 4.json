@@ -1,0 +1,590 @@
+{
+  "id": 4,
+  "chapterName": "Chapter 4",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which of the following designations would refer to the AWS US West (Oregon) region?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "us-east-1"
+        },
+        {
+          "id_option": "B",
+          "option": "us-west-2"
+        },
+        {
+          "id_option": "C",
+          "option": "us-west-2a"
+        },
+        {
+          "id_option": "D",
+          "option": "us-west-2b"
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The letter (a, b. . .) at the end of a designation indicates an availability zone. useast-1 would never be used for a region in the western part of the United States."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "Which of the following is an AWS region for which customer access is restricted?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AWS Admin"
+        },
+        {
+          "id_option": "B",
+          "option": "US-DOD"
+        },
+        {
+          "id_option": "C",
+          "option": "Asia Pacific (Tokyo)"
+        },
+        {
+          "id_option": "D",
+          "option": "AWS GovCloud"
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "The AWS GovCloud region is restricted to authorized customers only. Asia Pacific (Tokyo) is a normal region. AWS Admin and US-DOD don’t exist (as far as we know, at any rate)."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "When you request a new virtual machine instance in EC2, your instance will automatically launch into the currently selected value of which of the following?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Service"
+        },
+        {
+          "id_option": "B",
+          "option": "Subnet"
+        },
+        {
+          "id_option": "C",
+          "option": "Availability zone"
+        },
+        {
+          "id_option": "D",
+          "option": "Region"
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "EC2 instances will automatically launch into the region you currently have selected. You can manually select the subnet that’s associated with a particular availability zone for your new EC2 instance, but there’s no default choice."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "Which of the following are not globally based AWS services? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "RDS"
+        },
+        {
+          "id_option": "B",
+          "option": "Route 53"
+        },
+        {
+          "id_option": "C",
+          "option": "EC2"
+        },
+        {
+          "id_option": "D",
+          "option": "CloudFront"
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "Relational Database Service (RDS) and EC2 both use resources that can exist in only one region. Route 53 and CloudFront are truly global services in that they’re not located in or restricted to any single AWS region."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "Which of the following would be a valid endpoint your developers could use to access a particular Relational Database Service instance you’re running in the Northern Virginia region?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "us-east-1.amazonaws.com.rds"
+        },
+        {
+          "id_option": "B",
+          "option": "ecs.eu-west-3.amazonaws.com"
+        },
+        {
+          "id_option": "C",
+          "option": "rds.us-east-1.amazonaws.com"
+        },
+        {
+          "id_option": "D",
+          "option": "rds.amazonaws.com.us-east-1"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "The correct syntax for an endpoint is <service-designation>.<region-designation>.amazonaws.com—meaning, in this case, rds.us-east-1.amazonaws.com."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "What are the most significant architectural benefits of the way AWS designed its regions? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It can make infrastructure more fault-tolerant."
+        },
+        {
+          "id_option": "B",
+          "option": "It can make applications available to end users with lower latency."
+        },
+        {
+          "id_option": "C",
+          "option": "It can make applications more compliant with local regulations."
+        },
+        {
+          "id_option": "D",
+          "option": "It can bring down the price of running."
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "B",
+          " C"
+        ],
+        "explanation": "For most uses, distributing your application infrastructure between multiple AZs within a single region gives them sufficient fault tolerance. While AWS services do enjoy a significant economy of scale—bringing prices down—little of that is due to the structure of their regions. Lower latency and compliance are the biggest benefits from this list."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "Why is it that most AWS resources are tied to a single region?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Because those resources are run on a physical device, and that device must live somewhere"
+        },
+        {
+          "id_option": "B",
+          "option": "Because security considerations are best served by restricting access to a single physical location"
+        },
+        {
+          "id_option": "C",
+          "option": "Because access to any one digital resource must always occur through a single physical gateway"
+        },
+        {
+          "id_option": "D",
+          "option": "Because spreading them too far afield would introduce latency issues"
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Sharing a single resource among regions wouldn’t cause any particular security, networking, or latency problems. It’s a simple matter of finding a single physical host device to run on."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "You want to improve the resilience of your EC2 web server. Which of the following is the most effective and efficient approach?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Launch parallel, load-balanced instances in multiple AWS regions."
+        },
+        {
+          "id_option": "B",
+          "option": "Launch parallel, load-balanced instances in multiple availability zones within a single AWS region."
+        },
+        {
+          "id_option": "C",
+          "option": "Launch parallel, autoscaled instances in multiple AWS regions."
+        },
+        {
+          "id_option": "D",
+          "option": "Launch parallel, autoscaled instances in multiple availability zones within a single AWS region."
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Autoscaling is an important working element of application high availability, but it’s not what most directly drives it (that’s load balancing). The most effective and efficient way to get the job done is through parallel, load-balanced instances in multiple availability zones, not regions."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "Which of the following is the most accurate description of an AWS availability zone?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "One or more independently powered data centers running a wide range of hardware host types"
+        },
+        {
+          "id_option": "B",
+          "option": "One or more independently powered data centers running a uniform hardware host type"
+        },
+        {
+          "id_option": "C",
+          "option": "All the data centers located within a broad geographic area"
+        },
+        {
+          "id_option": "D",
+          "option": "The infrastructure running within a single physical data center"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "“Data centers running uniform host types” would describe an edge location. The data centers within a “broad geographic area” would more closely describe an AWS region. AZs aren’t restricted to a single data center."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "Which of the following most accurately describes a subnet within the AWS ecosystem?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The virtual limits imposed on the network access permitted to a resource instance"
+        },
+        {
+          "id_option": "B",
+          "option": "The block of IP addresses assigned for use within a single region"
+        },
+        {
+          "id_option": "C",
+          "option": "The block of IP addresses assigned for use within a single availability zone"
+        },
+        {
+          "id_option": "D",
+          "option": "The networking hardware used within a single availability zone"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Imposing virtual networking limits on an instance would be the job of a security group or access control list. IP address blocks are not assigned at the region level. Customers have no access to or control over AWS networking hardware."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "What determines the order by which subnets/AZ options are displayed in EC2 configuration dialog boxes?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Alphabetical order."
+        },
+        {
+          "id_option": "B",
+          "option": "They (appear) to be displayed in random order."
+        },
+        {
+          "id_option": "C",
+          "option": "Numerical order."
+        },
+        {
+          "id_option": "D",
+          "option": "By order of capacity, with largest capacity first."
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "AWS displays AZs in (apparently) random order to prevent too many resources from being launched in too few zones."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "What is the primary goal of autoscaling?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "To ensure the long-term reliability of a particular physical resource"
+        },
+        {
+          "id_option": "B",
+          "option": "To ensure the long-term reliability of a particular virtual resource"
+        },
+        {
+          "id_option": "C",
+          "option": "To orchestrate the use of multiple parallel resources to direct incoming user requests"
+        },
+        {
+          "id_option": "D",
+          "option": "To ensure that a predefined service level is maintained regardless of external demand or instance failures"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "Autoscaling doesn’t focus on any one resource (physical or virtual) because it’s interested only in the appropriate availability and quality of the overall service. The job of orchestration is for load balancers, not autoscalers."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "Which of the following design strategies is most effective for maintaining the reliability of a cloud application?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Resource isolation"
+        },
+        {
+          "id_option": "B",
+          "option": "Resource automation"
+        },
+        {
+          "id_option": "C",
+          "option": "Resource redundancy"
+        },
+        {
+          "id_option": "D",
+          "option": "Resource geolocation"
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Resource isolation can play an important role in security, but not reliability. Automation can improve administration processes, but neither it, nor geolocation, is the most effective reliability strategy."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "Which of the following AWS services are not likely to benefit from Amazon edge locations? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "RDS"
+        },
+        {
+          "id_option": "B",
+          "option": "EC2 load balancers"
+        },
+        {
+          "id_option": "C",
+          "option": "Elastic Block Store (EBS)"
+        },
+        {
+          "id_option": "D",
+          "option": "CloudFront"
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "A",
+          " C"
+        ],
+        "explanation": "RDS database instances and Lambda functions are not qualified CloudFront origins. EC2 load balancers can be used as CloudFront origins."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "Which of the following is the primary benefit of using CloudFront distributions?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Automated protection from mass email campaigns"
+        },
+        {
+          "id_option": "B",
+          "option": "Greater availability through redundancy"
+        },
+        {
+          "id_option": "C",
+          "option": "Greater security through data encryption"
+        },
+        {
+          "id_option": "D",
+          "option": "Reduced latency access to your content no matter where your end users live"
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "CloudFront can’t protect against spam, and although it can complement your application’s existing redundancy and encryption, that is not its primary purpose."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "What is the main purpose of Amazon Route 53?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Countering the threat of distributed denial-of-service (DDoS) attacks"
+        },
+        {
+          "id_option": "B",
+          "option": "Managing domain name registration and traffic routing"
+        },
+        {
+          "id_option": "C",
+          "option": "Protecting web applications from web-based threats"
+        },
+        {
+          "id_option": "D",
+          "option": "Using the serverless power of Lambda to customize CloudFront behavior"
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Countering the threat of DDoS attacks is the job of AWS Shield. Protecting web applications from web-based threats is done by AWS Web Application Firewall. Using Lambda to customize CloudFront behavior is for Lambda Edge."
+      }
+    },
+    {
+      "id_question": 17,
+      "question": "According to the AWS Shared Responsibility Model, which of the following are responsibilities of AWS? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The security of the cloud"
+        },
+        {
+          "id_option": "B",
+          "option": "Patching underlying virtualization software running in AWS data centers"
+        },
+        {
+          "id_option": "C",
+          "option": "Security of what’s in the cloud"
+        },
+        {
+          "id_option": "D",
+          "option": "Patching OSs running on EC2 instances"
+        }
+      ],
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "What’s in the cloud is your responsibility—it includes the administration of EC2-based operating systems."
+      }
+    },
+    {
+      "id_question": 18,
+      "question": "According to the AWS Shared Responsibility Model, what’s the best way to define the status of the software driving an AWS managed service?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Everything associated with an AWS managed service is the responsibility of AWS."
+        },
+        {
+          "id_option": "B",
+          "option": "Whatever is added by the customer (like application code) is the customer’s responsibility."
+        },
+        {
+          "id_option": "C",
+          "option": "Whatever the customer can control (application code and/or configuration settings) is the customer’s responsibility."
+        },
+        {
+          "id_option": "D",
+          "option": "Everything associated with an AWS managed service is the responsibility of the customer."
+        }
+      ],
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "There’s no one easy answer, as some managed services are pretty much entirely within Amazon’s sphere, and others leave lots of responsibility with the customer. Remember, “if you can edit it, you own it.”"
+      }
+    },
+    {
+      "id_question": 19,
+      "question": "Which of the following is one of the first places you should look when troubleshooting a failing application?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AWS Acceptable Use Monitor"
+        },
+        {
+          "id_option": "B",
+          "option": "Service Status Dashboard"
+        },
+        {
+          "id_option": "C",
+          "option": "AWS Billing Dashboard"
+        },
+        {
+          "id_option": "D",
+          "option": "Service Health Dashboard"
+        }
+      ],
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "The AWS Billing Dashboard is focused on your account billing issues. Neither the AWS Acceptable Use Monitor nor the Service Status Dashboard actually exists. But nice try."
+      }
+    },
+    {
+      "id_question": 20,
+      "question": "Where will you find information on the limits AWS imposes on the ways you can use your account resources?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AWS User Agreement Policy"
+        },
+        {
+          "id_option": "B",
+          "option": "AWS Acceptable Use Policy"
+        },
+        {
+          "id_option": "C",
+          "option": "AWS Acceptable Use Monitor"
+        },
+        {
+          "id_option": "D",
+          "option": "AWS Acceptable Use Dashboard"
+        }
+      ],
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The correct document (and web page https://aws.amazon.com/aup) for this information is the AWS Acceptable Use Policy."
+      }
+    }
+  ]
+}

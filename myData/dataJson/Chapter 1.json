@@ -1,0 +1,358 @@
+{
+  "id": 1,
+  "chapterName": "Chapter 1",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which of the following does not contribute significantly to the operational value of a large cloud provider like AWS?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Multiregional presence"
+        },
+        {
+          "id_option": "B",
+          "option": "Highly experienced teams of security engineers"
+        },
+        {
+          "id_option": "C",
+          "option": "Deep experience in the retail sphere"
+        },
+        {
+          "id_option": "D",
+          "option": "Metered, pay-per-use pricing"
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "Having globally distributed infrastructure and experienced security engineers makes a provider’s infrastructure more reliable. Metered pricing makes a wider range of workloads possible."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "Which of the following are signs of a highly available application? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A failure in one geographic region will trigger an automatic failover to resources in a different region."
+        },
+        {
+          "id_option": "B",
+          "option": "Applications are protected behind multiple layers of security."
+        },
+        {
+          "id_option": "C",
+          "option": "Virtualized hypervisor-driven systems are deployed as mandated by company policy."
+        },
+        {
+          "id_option": "D",
+          "option": "Spikes in user demand are met through automatically increasing resources."
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "A",
+          " D"
+        ],
+        "explanation": "Security and virtualization are both important characteristics of successful cloud work\u0002loads, but neither will directly impact availability."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "How does the metered payment model make many benefits of cloud computing possible? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Greater application security is now possible."
+        },
+        {
+          "id_option": "B",
+          "option": "Experiments with multiple configuration options are now cost-effective."
+        },
+        {
+          "id_option": "C",
+          "option": "Applications are now highly scalable."
+        },
+        {
+          "id_option": "D",
+          "option": "Full-stack applications are possible without the need to invest in capital expenses."
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "Security and scalability are important cloud elements but are not related to metered pricing."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "Which of the following are direct benefits of server virtualization? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Fast resource provisioning and launching"
+        },
+        {
+          "id_option": "B",
+          "option": "Efficient (high-density) use of resources"
+        },
+        {
+          "id_option": "C",
+          "option": "Greater application security"
+        },
+        {
+          "id_option": "D",
+          "option": "Elastic application designs"
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "Security and elasticity are important but are not directly related to server virtualization."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "What is a hypervisor?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Hardware device used to provide an interface between storage and compute modules"
+        },
+        {
+          "id_option": "B",
+          "option": "Hardware device used to provide an interface between networking and compute modules"
+        },
+        {
+          "id_option": "C",
+          "option": "Software used to log and monitor virtualized operations"
+        },
+        {
+          "id_option": "D",
+          "option": "Software used to administer virtualized resources run on physical infrastructure"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "A hypervisor is software (not hardware) that administers virtualized operations."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "Which of the following best describes server virtualization?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "“Sharding” data from multiple sources into a single virtual data store"
+        },
+        {
+          "id_option": "B",
+          "option": "Logically partitioning physical compute and storage devices into multiple smaller virtual devices"
+        },
+        {
+          "id_option": "C",
+          "option": "Aggregating physical resources spread over multiple physical devices into a single virtual device"
+        },
+        {
+          "id_option": "D",
+          "option": "Abstracting the complexity of physical infrastructure behind a simple web interface"
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Sharding, aggregating remote resources, and abstracting complex infrastructure can all be accomplished using virtualization techniques, but they aren’t, of themselves, virtualization."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "Which of the following best describes infrastructure-as-a-service products?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Services that hide infrastructure complexity behind a simple interface"
+        },
+        {
+          "id_option": "B",
+          "option": "Services that provide a service to end users through a public network"
+        },
+        {
+          "id_option": "C",
+          "option": "Services that give you direct control over underlying compute and storage resources"
+        },
+        {
+          "id_option": "D",
+          "option": "Platforms that allow developers to run their code over short periods on cloud servers"
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "PaaS products mask complexity, SaaS products provide end-user services, and serverless architectures (like AWS Lambda) let developers run code on cloud servers."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "Which of the following best describes platform-as-a-service products?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Services that hide infrastructure complexity behind a simple interface"
+        },
+        {
+          "id_option": "B",
+          "option": "Platforms that allow developers to run their code over short periods on cloud servers"
+        },
+        {
+          "id_option": "C",
+          "option": "Services that give you direct control over underlying compute and storage resources"
+        },
+        {
+          "id_option": "D",
+          "option": "Services that provide a service to end users through a public network"
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "IaaS products provide full infrastructure access, SaaS products provide end-user services, and serverless architectures (like AWS Lambda) let developers run code on cloud servers."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "Which of the following best describes software-as-a-service products?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Services that give you direct control over underlying compute and storage resources"
+        },
+        {
+          "id_option": "B",
+          "option": "Services that provide a service to end users through a public network"
+        },
+        {
+          "id_option": "C",
+          "option": "Services that hide infrastructure complexity behind a simple interface"
+        },
+        {
+          "id_option": "D",
+          "option": "Platforms that allow developers to run their code over short periods on cloud servers"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "IaaS products provide full infrastructure access, PaaS products mask complexity, and serverless architectures (like AWS Lambda) let developers run code on cloud servers."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "Which of the following best describes scalability?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The ability of an application to automatically add preconfigured compute resources to meet increasing demand"
+        },
+        {
+          "id_option": "B",
+          "option": "The ability of an application to increase or decrease compute resources to match chang\u0002ing demand"
+        },
+        {
+          "id_option": "C",
+          "option": "The ability to more densely pack virtualized resources onto a single physical server"
+        },
+        {
+          "id_option": "D",
+          "option": "The ability to bill resource usage using a pay-per-user model"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Increasing or decreasing compute resources better describes elasticity. Efficient use of virtualized resources and billing models aren’t related directly to scalability."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "Which of the following best describes elasticity?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The ability to more densely pack virtualized resources onto a single physical server"
+        },
+        {
+          "id_option": "B",
+          "option": "The ability to bill resource usage using a pay-per-user model"
+        },
+        {
+          "id_option": "C",
+          "option": "The ability of an application to increase or decrease compute resources to match chang\u0002ing demand"
+        },
+        {
+          "id_option": "D",
+          "option": "The ability of an application to automatically add preconfigured compute resources to meet increasing demand"
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Preconfiguring compute instances before they’re used to scale up an application is an element of scalability rather than elasticity. Efficient use of virtualized resources and billing models aren’t related directly to elasticity."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "Which of the following characteristics most help AWS provide such scalable services? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The enormous number of servers it operates"
+        },
+        {
+          "id_option": "B",
+          "option": "The value of its capitalized assets"
+        },
+        {
+          "id_option": "C",
+          "option": "Its geographic reach"
+        },
+        {
+          "id_option": "D",
+          "option": "Its highly automated infrastructure administration systems"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "A",
+          " D"
+        ],
+        "explanation": "Capitalized assets and geographic reach are important but don’t have a direct impact on operational scalability."
+      }
+    }
+  ]
+}

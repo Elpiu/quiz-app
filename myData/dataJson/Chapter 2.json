@@ -1,0 +1,474 @@
+{
+  "id": 2,
+  "chapterName": "Chapter 2",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which of the following EC2 services can be used without charge under the Free Tier?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Any single EC2 instance type as long as it runs for less than one hour per day"
+        },
+        {
+          "id_option": "B",
+          "option": "Any single EC2 instance type as long as it runs for less than 75 hours per month"
+        },
+        {
+          "id_option": "C",
+          "option": "A single t2.micro EC2 instance type instance for 750 hours per month"
+        },
+        {
+          "id_option": "D",
+          "option": "t2.micro EC2 instance type instances for a total of 750 hours per month"
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "Only the t2.micro instance type is Free Tier–eligible, and any combination of t2.micro instances can be run up to a total of 750 hours per month."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "You want to experiment with deploying a web server on an EC2 instance. Which two of the following resources can you include to make that work while remaining within the Free Tier? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A 5 GB bucket on S3"
+        },
+        {
+          "id_option": "B",
+          "option": "A t2.micro instance type EC2 instance"
+        },
+        {
+          "id_option": "C",
+          "option": "A 30 GB solid-state Elastic Block Store (EBS) drive"
+        },
+        {
+          "id_option": "D",
+          "option": "Two 20 GB solid-state Elastic Block Store (EBS) drives"
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "B",
+          " C"
+        ],
+        "explanation": "S3 buckets—while available in such volumes under the Free Tier—are not necessary for an EC2 instance. Since the maximum total EBS space allowed by the Free Tier is 30 GB, two 20 GB would not be covered."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "Which of the following usage will always be cost-free even after your account’s Free Tier has expired? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "One million API calls/month on Amazon API Gateway"
+        },
+        {
+          "id_option": "B",
+          "option": "10 GB of data retrievals from Amazon Glacier per month"
+        },
+        {
+          "id_option": "C",
+          "option": "500 MB/month of free storage on the Amazon Elastic Container Registry (ECR)"
+        },
+        {
+          "id_option": "D",
+          "option": "10 custom monitoring metrics and 10 alarms on Amazon CloudWatch"
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "The API calls/month and ECR free storage are available only under the Free Tier."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "Which of the following tools are available to ensure you won’t accidentally run past your Free Tier limit and incur unwanted costs? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Automated email alerts when activity approaches the Free Tier limits"
+        },
+        {
+          "id_option": "B",
+          "option": "The Top Free Tier Services by Usage section on the Billing & Cost Management Dashboard"
+        },
+        {
+          "id_option": "C",
+          "option": "Billing & Cost Management section on the Top Free Tier Services Dashboard"
+        },
+        {
+          "id_option": "D",
+          "option": "The Billing Preferences Dashboard"
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "There is no Top Free Tier Services Dashboard or, for that matter, a Billing Preferences Dashboard."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "Which of the following is likely to be an accurate source of AWS pricing information?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Wikipedia pages relating to a particular service"
+        },
+        {
+          "id_option": "B",
+          "option": "The AWS Command-Line Interface (AWS CLI)"
+        },
+        {
+          "id_option": "C",
+          "option": "AWS online documentation relating to a particular service"
+        },
+        {
+          "id_option": "D",
+          "option": "The AWS Pricing Calculator"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Wikipedia pages aren’t updated or detailed enough to be helpful in this respect. The AWS CLI isn’t likely to have much (if any) pricing information. The Pricing Calculator may not contain the absolute latest information about service pricing."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "Which of the following will probably not affect the pricing for an AWS service?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Requests for raising the available service limit"
+        },
+        {
+          "id_option": "B",
+          "option": "AWS region"
+        },
+        {
+          "id_option": "C",
+          "option": "The volume of data saved to an S3 bucket"
+        },
+        {
+          "id_option": "D",
+          "option": "The volume of data egress from an Amazon S3 Glacier vault"
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Pricing will normally change based on the volume of service units you consume and, often, between AWS regions."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "Which of the following AWS documentation URLs points to the page containing an up-todate list of service limits?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "https://docs.aws.amazon.com/general/latest/gr/limits.html"
+        },
+        {
+          "id_option": "B",
+          "option": "https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html"
+        },
+        {
+          "id_option": "C",
+          "option": "https://aws.amazon.com/general/latest/gr/aws_service_limits.html"
+        },
+        {
+          "id_option": "D",
+          "option": "https://docs.aws.amazon.com/latest/gr/aws_service_limits.html"
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "The correct URL is https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "Which of the following best describes one possible reason for AWS service limits?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "To prevent individual customers from accidentally launching a crippling level of resource consumption"
+        },
+        {
+          "id_option": "B",
+          "option": "To more equally distribute available resources between customers from different regions"
+        },
+        {
+          "id_option": "C",
+          "option": "To allow customers to more gradually increase their deployments"
+        },
+        {
+          "id_option": "D",
+          "option": "Because there are logical limits to the ability of AWS resources to scale up"
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Resource limits exist only within individual regions; the limits in one region don’t impact another. There’s no logistical reason that customers can’t scale up deployments at any rate. There are, in fact, no logical limits to the ability of AWS resources to scale upward."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "Is it always possible to request service limit increases from AWS?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Yes. All service limits can be increased."
+        },
+        {
+          "id_option": "B",
+          "option": "No. A limit can never be increased."
+        },
+        {
+          "id_option": "C",
+          "option": "Service limits are defaults. They can be increased or decreased on demand."
+        },
+        {
+          "id_option": "D",
+          "option": "No. Some service limits are hard."
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "While most service limits are soft and can be raised on request, some service limits exist that are absolute."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "Which is the best place to get a quick summary of this month’s spend for your account?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Budgets"
+        },
+        {
+          "id_option": "B",
+          "option": "Cost Explorer"
+        },
+        {
+          "id_option": "C",
+          "option": "Cost and Usage reports"
+        },
+        {
+          "id_option": "D",
+          "option": "Billing & Cost Management Dashboard"
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "The Cost Explorer and Cost and Usage reports provide more in-depth and/or customized details. Budgets allow you to set alerts based on usage."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "What is the main goal for creating a Usage budget type (in AWS Budgets)?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "To correlate usage per unit cost to understand your account cost efficiency"
+        },
+        {
+          "id_option": "B",
+          "option": "To track the status of any active reserved instances on your account"
+        },
+        {
+          "id_option": "C",
+          "option": "To track particular categories of resource consumption"
+        },
+        {
+          "id_option": "D",
+          "option": "To monitor costs being incurred against your account"
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Reservation budgets track the status of any active reserved instances on your account. Cost budgets monitor costs being incurred against your account. There is no budget type that correlates usage per unit cost to determine your account cost efficiency."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "Which of the following is not a setting you can configure in a Cost budget?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Period (monthly, quarterly, etc.)"
+        },
+        {
+          "id_option": "B",
+          "option": "Instance type"
+        },
+        {
+          "id_option": "C",
+          "option": "Start and stop dates"
+        },
+        {
+          "id_option": "D",
+          "option": "Owner (username of resource owner)"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "You can configure the period, instance type, and start/stop dates for a budget, but you can’t filter by resource owner."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "What is the main difference between the goals of Cost Explorer and of Cost and Usage reports?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Cost Explorer displays visualizations of high-level historical and current account costs, whereas Cost and Usage reports generate granular usage reports in CSV format."
+        },
+        {
+          "id_option": "B",
+          "option": "Cost and Usage reports display visualizations of high-level historical and current account costs, whereas Cost Explorer generates granular usage reports in CSV format."
+        },
+        {
+          "id_option": "C",
+          "option": "Cost Explorer lets you set alerts that are triggered by billing events, whereas Cost and Usage reports help you visualize system events."
+        },
+        {
+          "id_option": "D",
+          "option": "Cost and Usage reports are meant to alert you to malicious intrusions, whereas Cost Explorer displays visualizations of high-level historical and current account costs."
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Billing events aren’t triggers for alerts. Nothing in this chapter discusses intrusion events."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "What is the purpose of cost allocation tags?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "To associate spend limits to automatically trigger resource shutdowns when necessary"
+        },
+        {
+          "id_option": "B",
+          "option": "To help you identify the purpose and owner of a particular running resource to better understand and control deployments"
+        },
+        {
+          "id_option": "C",
+          "option": "To help you identify resources for the purpose of tracking your account spending"
+        },
+        {
+          "id_option": "D",
+          "option": "To visually associate account events with billing periods"
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Tags are passive, so they can’t automatically trigger anything. Resource tags—not cost allocation tags—are meant to help you understand and control deployments. Tags aren’t associated with particular billing periods."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "Which of the following scenarios would be a good use case for AWS Organizations? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "A single company with multiple AWS accounts that wants a single place to administer everything"
+        },
+        {
+          "id_option": "B",
+          "option": "An organization that provides AWS access to large teams of its developers and admins"
+        },
+        {
+          "id_option": "C",
+          "option": "A company that’s integrated some operations with an upstream vendor"
+        },
+        {
+          "id_option": "D",
+          "option": "A company with two distinct operational units, each with its own accounting system and AWS account"
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "A",
+          " C"
+        ],
+        "explanation": "Companies with multiple users of resources in a single AWS account would not benefit from AWS Organizations, nor would a company with completely separated units. The value of AWS Organizations is in integrating the administration of related accounts."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "Which of these tools lets you design graphs within the browser interface to track your account spending?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Budgets"
+        },
+        {
+          "id_option": "B",
+          "option": "Cost Explorer"
+        },
+        {
+          "id_option": "C",
+          "option": "Reports"
+        },
+        {
+          "id_option": "D",
+          "option": "Consolidating Billing"
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Budgets are used to set alerts. Reports provide CSV-formatted data for offline processing. Consolidated Billing (now migrated to AWS Organizations) is for administering resources across multiple AWS accounts."
+      }
+    }
+  ]
+}

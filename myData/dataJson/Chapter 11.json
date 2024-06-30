@@ -1,0 +1,619 @@
+{
+  "id": 11,
+  "chapterName": "Chapter 11",
+  "questions": [
+    {
+      "id_question": 1,
+      "question": "Which of the following is an advantage of using CloudFormation?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It uses the popular Python programming language."
+        },
+        {
+          "id_option": "B",
+          "option": "It prevents unauthorized manual changes to resources."
+        },
+        {
+          "id_option": "C",
+          "option": "It lets you create multiple separate AWS environments using a single template."
+        },
+        {
+          "id_option": "D",
+          "option": "It can create resources outside of AWS."
+        }
+      ],
+      "answer": {
+        "id": 1,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "CloudFormation can create AWS resources and manages them collectively in a stack. Templates are written in the CloudFormation language, not Python. CloudFormation can’t create resources outside of AWS. It also doesn’t prevent manual changes to resources in a stack."
+      }
+    },
+    {
+      "id_question": 2,
+      "question": "What formats do CloudFormation templates support? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "XML"
+        },
+        {
+          "id_option": "B",
+          "option": "YAML"
+        },
+        {
+          "id_option": "C",
+          "option": "HTML"
+        },
+        {
+          "id_option": "D",
+          "option": "JSON"
+        }
+      ],
+      "answer": {
+        "id": 2,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "CloudFormation templates are written in the YAML or JSON format."
+      }
+    },
+    {
+      "id_question": 3,
+      "question": "What’s an advantage of using parameters in a CloudFormation template?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Allow customizing a stack without changing the template."
+        },
+        {
+          "id_option": "B",
+          "option": "Prevent unauthorized users from using a template."
+        },
+        {
+          "id_option": "C",
+          "option": "Prevent stack updates."
+        },
+        {
+          "id_option": "D",
+          "option": "Allow multiple stacks to be created from the same template."
+        }
+      ],
+      "answer": {
+        "id": 3,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Parameters let you input customizations when creating a CloudFormation stack without having to modify the underlying template. Parameters don’t prevent stack updates or unauthorized changes. A template can be used to create multiple stacks, regardless of whether it uses parameters."
+      }
+    },
+    {
+      "id_question": 4,
+      "question": "Why would you use CloudFormation to automatically create resources for a development environment instead of creating them using AWS CLI commands? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "The resources CloudFormation creates are organized into stacks and can be managed as a single unit."
+        },
+        {
+          "id_option": "B",
+          "option": "CloudFormation stack updates help ensure that changes to one resource won’t break another."
+        },
+        {
+          "id_option": "C",
+          "option": "Resources created by CloudFormation always work as expected."
+        },
+        {
+          "id_option": "D",
+          "option": "CloudFormation can provision resources faster than the AWS CLI."
+        }
+      ],
+      "answer": {
+        "id": 4,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "The resources CloudFormation creates are organized into stacks. When you update a stack, CloudFormation analyzes the relationships among resources in the stack and updates dependent resources as necessary. This does not, however, mean that any resource you create using CloudFormation will work as you expect. Provisioning resources using CloudFormation is not necessarily faster than using the AWS CLI."
+      }
+    },
+    {
+      "id_question": 5,
+      "question": "What are two features of CodeCommit? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Versioning"
+        },
+        {
+          "id_option": "B",
+          "option": "Automatic deployment"
+        },
+        {
+          "id_option": "C",
+          "option": "Differencing"
+        },
+        {
+          "id_option": "D",
+          "option": "Manual deployment"
+        }
+      ],
+      "answer": {
+        "id": 5,
+        "id_options": [
+          "A",
+          " C"
+        ],
+        "explanation": "CodeCommit is a private Git repository that offers versioning and differencing. It does not perform deployments."
+      }
+    },
+    {
+      "id_question": 6,
+      "question": "In the context of CodeCommit, what can differencing accomplish?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Allowing reverting to an older version of a file"
+        },
+        {
+          "id_option": "B",
+          "option": "Understanding what code change introduced a bug"
+        },
+        {
+          "id_option": "C",
+          "option": "Deleting duplicate lines of code"
+        },
+        {
+          "id_option": "D",
+          "option": "Seeing when an application was last deployed"
+        }
+      ],
+      "answer": {
+        "id": 6,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Differencing lets you see the differences between two versions of a file, which can be useful when figuring out what change introduced a bug. Versioning, not differencing, is what allows reverting to an older version of a file. Differencing doesn’t identify duplicate lines of code or tell you when an application was deployed."
+      }
+    },
+    {
+      "id_question": 7,
+      "question": "What software development practice regularly tests new code for bugs but doesn’t do anything else?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Differencing"
+        },
+        {
+          "id_option": "B",
+          "option": "Continuous deployment"
+        },
+        {
+          "id_option": "C",
+          "option": "Continuous delivery"
+        },
+        {
+          "id_option": "D",
+          "option": "Continuous integration"
+        }
+      ],
+      "answer": {
+        "id": 7,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "Continuous integration is the practice of running code through a build or test process as soon as it’s checked into a repository. Continuous delivery and continuous deployment include continuous integration but add deployment to the process. Differencing only shows the differences between different versions of a file but doesn’t perform any testing."
+      }
+    },
+    {
+      "id_question": 8,
+      "question": "Which CodeBuild build environment compute types support Windows operating systems? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "build.general2.large"
+        },
+        {
+          "id_option": "B",
+          "option": "build.general1.medium"
+        },
+        {
+          "id_option": "C",
+          "option": "build.general1.small"
+        },
+        {
+          "id_option": "D",
+          "option": "build.general1.large"
+        },
+        {
+          "id_option": "E",
+          "option": "build.windows1.small"
+        }
+      ],
+      "answer": {
+        "id": 8,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "Build.general1.medium and build.general1.large support Windows and Linux operating systems. Build.general1.small supports Linux only. The other compute types don’t exist."
+      }
+    },
+    {
+      "id_question": 9,
+      "question": "What does a CodeBuild environment always contain? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "An operating system"
+        },
+        {
+          "id_option": "B",
+          "option": "A Docker image"
+        },
+        {
+          "id_option": "C",
+          "option": "The Python programming language"
+        },
+        {
+          "id_option": "D",
+          "option": ".NET Core"
+        },
+        {
+          "id_option": "E",
+          "option": "The PHP programming language"
+        }
+      ],
+      "answer": {
+        "id": 9,
+        "id_options": [
+          "A",
+          " B"
+        ],
+        "explanation": "A CodeBuild build environment always contains an operating system and a Docker image. It may contain the other components but doesn’t have to."
+      }
+    },
+    {
+      "id_question": 10,
+      "question": "Which of the following can CodeDeploy do? (Choose three.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Deploy an application to an on-premises Windows instance."
+        },
+        {
+          "id_option": "B",
+          "option": "Deploy a Docker container to the Elastic Container Service."
+        },
+        {
+          "id_option": "C",
+          "option": "Upgrade an application on an EC2 instance running Red Hat Enterprise Linux."
+        },
+        {
+          "id_option": "D",
+          "option": "Deploy an application to an Android smartphone."
+        },
+        {
+          "id_option": "E",
+          "option": "Deploy a website to an S3 bucket."
+        }
+      ],
+      "answer": {
+        "id": 10,
+        "id_options": [
+          "A",
+          " B",
+          " C"
+        ],
+        "explanation": "CodeDeploy can deploy application files to Linux or Windows EC2 instances and Docker containers to ECS. It can’t deploy an application to smartphones, and it can’t deploy files to an S3 bucket."
+      }
+    },
+    {
+      "id_question": 11,
+      "question": "What is the minimum number of actions in a CodePipeline pipeline?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "1"
+        },
+        {
+          "id_option": "B",
+          "option": "2"
+        },
+        {
+          "id_option": "C",
+          "option": "3"
+        },
+        {
+          "id_option": "D",
+          "option": "4"
+        },
+        {
+          "id_option": "E",
+          "option": "0"
+        }
+      ],
+      "answer": {
+        "id": 11,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "At the very least, a CodePipeline must consist of a source stage and a deploy stage."
+      }
+    },
+    {
+      "id_question": 12,
+      "question": "You want to predefine the configuration of EC2 instances that you plan to launch manually and using Auto Scaling. What resource must you use?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "CloudFormation template"
+        },
+        {
+          "id_option": "B",
+          "option": "Instance role"
+        },
+        {
+          "id_option": "C",
+          "option": "Launch configuration"
+        },
+        {
+          "id_option": "D",
+          "option": "Launch template"
+        }
+      ],
+      "answer": {
+        "id": 12,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "A launch template can be used to launch instances manually and with EC2 Auto Scaling. A launch configuration can’t be used to launch instances manually. An instance role is used to grant permissions to applications running on an instance. Auto Scaling can’t provision instances using a CloudFormation template."
+      }
+    },
+    {
+      "id_question": 13,
+      "question": "What Auto Scaling group parameters set the limit for the number of instances that Auto Scaling creates? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Maximum"
+        },
+        {
+          "id_option": "B",
+          "option": "Group size"
+        },
+        {
+          "id_option": "C",
+          "option": "Desired capacity"
+        },
+        {
+          "id_option": "D",
+          "option": "Minimum"
+        }
+      ],
+      "answer": {
+        "id": 13,
+        "id_options": [
+          "A",
+          " D"
+        ],
+        "explanation": "The maximum and minimum group size values limit the number of instances in an Auto Scaling group. The desired capacity (also known as the group size) is the number of instances that Auto Scaling will generally maintain, but Auto Scaling can launch or terminate instances if dynamic scaling calls for it."
+      }
+    },
+    {
+      "id_question": 14,
+      "question": "An Auto Scaling group has a desired capacity of 7 and a maximum size of 7. What will Auto Scaling do if someone manually terminates one of these instances?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "It will not launch any new instances."
+        },
+        {
+          "id_option": "B",
+          "option": "It will launch one new instance."
+        },
+        {
+          "id_option": "C",
+          "option": "It will terminate one instance."
+        },
+        {
+          "id_option": "D",
+          "option": "It will change the desired capacity to 6."
+        }
+      ],
+      "answer": {
+        "id": 14,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "Auto Scaling will use self-healing to replace the failed instance to maintain the desired capacity of 7. Terminating an instance or failing to replace the failed one will result in 6 instances. Auto Scaling won’t ever change the desired capacity in response to a failed instance."
+      }
+    },
+    {
+      "id_question": 15,
+      "question": "What Auto Scaling feature creates a scaling schedule based on past usage patterns?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Predictive scaling"
+        },
+        {
+          "id_option": "B",
+          "option": "Scheduled scaling"
+        },
+        {
+          "id_option": "C",
+          "option": "Dynamic scaling"
+        },
+        {
+          "id_option": "D",
+          "option": "Pattern scaling"
+        }
+      ],
+      "answer": {
+        "id": 15,
+        "id_options": [
+          "A"
+        ],
+        "explanation": "Predictive scaling creates a scheduled scaling action based on past usage patterns. Scheduled scaling and dynamic scaling do not create scheduled scaling actions. There is no such thing as pattern scaling."
+      }
+    },
+    {
+      "id_question": 16,
+      "question": "What type of AWS Systems Manager document can run Bash or PowerShell scripts on an EC2 instance?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Run document"
+        },
+        {
+          "id_option": "B",
+          "option": "Command document"
+        },
+        {
+          "id_option": "C",
+          "option": "Automation document"
+        },
+        {
+          "id_option": "D",
+          "option": "Script document"
+        }
+      ],
+      "answer": {
+        "id": 16,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "A Command document can execute commands on an EC2 instance. An Automation document can perform administrative tasks on AWS, such as starting or stopping an instance. There is no such thing as a Script document or a Run document."
+      }
+    },
+    {
+      "id_question": 17,
+      "question": "What type of AWS Systems Manager document can take a snapshot of an EC2 instance?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "Command document"
+        },
+        {
+          "id_option": "B",
+          "option": "Run document"
+        },
+        {
+          "id_option": "C",
+          "option": "Script document"
+        },
+        {
+          "id_option": "D",
+          "option": "Automation document"
+        }
+      ],
+      "answer": {
+        "id": 17,
+        "id_options": [
+          "D"
+        ],
+        "explanation": "An Automation document can perform administrative tasks on AWS, such as starting or stopping an instance. A Command document can execute commands on an EC2 instance. There is no such thing as a Script document or a Run document."
+      }
+    },
+    {
+      "id_question": 18,
+      "question": "Which of the following OpsWorks services uses Chef recipes?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "AWS OpsWorks for Puppet Enterprise"
+        },
+        {
+          "id_option": "B",
+          "option": "AWS OpsWorks Stacks"
+        },
+        {
+          "id_option": "C",
+          "option": "AWS OpsWorks Layers"
+        },
+        {
+          "id_option": "D",
+          "option": "AWS OpsWorks for Automation"
+        }
+      ],
+      "answer": {
+        "id": 18,
+        "id_options": [
+          "B"
+        ],
+        "explanation": "AWS OpsWorks Stacks uses Chef recipes, whereas AWS OpsWorks for Puppet Enterprise uses Puppet modules. There is no service called AWS OpsWorks Layers or AWS OpsWorks for Automation."
+      }
+    },
+    {
+      "id_question": 19,
+      "question": "What configuration management platforms does OpsWorks support? (Choose two.)",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "SaltStack"
+        },
+        {
+          "id_option": "B",
+          "option": "Puppet Enterprise"
+        },
+        {
+          "id_option": "C",
+          "option": "CFEngine"
+        },
+        {
+          "id_option": "D",
+          "option": "Chef"
+        },
+        {
+          "id_option": "E",
+          "option": "Ansible"
+        }
+      ],
+      "answer": {
+        "id": 19,
+        "id_options": [
+          "B",
+          " D"
+        ],
+        "explanation": "OpsWorks supports the Puppet Enterprise and Chef configuration management platforms. It doesn’t support SaltStack, Ansible, or CFEngine."
+      }
+    },
+    {
+      "id_question": 20,
+      "question": "Which of the following OpsWorks Stacks layers contains at least one EC2 instance?",
+      "options": [
+        {
+          "id_option": "A",
+          "option": "EC2 Auto Scaling layer"
+        },
+        {
+          "id_option": "B",
+          "option": "Elastic Container Service (ECS) cluster layer"
+        },
+        {
+          "id_option": "C",
+          "option": "OpsWorks layer"
+        },
+        {
+          "id_option": "D",
+          "option": "Relational Database Service (RDS) layer"
+        },
+        {
+          "id_option": "E",
+          "option": "Elastic Load Balancing (ELB) layer"
+        }
+      ],
+      "answer": {
+        "id": 20,
+        "id_options": [
+          "C"
+        ],
+        "explanation": "Only an OpsWorks layer contains at least one EC2 instance. There’s no such thing as an EC2 Auto Scaling layer."
+      }
+    }
+  ]
+}
