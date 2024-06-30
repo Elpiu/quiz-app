@@ -15,16 +15,21 @@ import chapter9 from '../../../myData/dataJson/Chapter 9.json';
 import chapter10 from '../../../myData/dataJson/Chapter 10.json';
 import chapter11 from '../../../myData/dataJson/Chapter 11.json';
 import chapter12 from '../../../myData/dataJson/Chapter 12.json';
+import allQdata from '../../../myData/dataJson/data.json';
+import {opt} from "ts-interface-checker";
+
 
 
 export interface IMainDataContainer {
   getNumberOfChapters(): number
   getAllChapter(): Chapter[]
   getChapter(input: number | string): Chapter | undefined
+  getRandomQuestion(howMany: number): Question[]
 }
 
 export type MainData = {
   chapters: Chapter[]
+  allQuestion: Question[]
 }
 
 @injectable()
@@ -34,7 +39,8 @@ export class MainDataContainer extends BaseContainer<MainData> implements IMainD
 
   constructor() {
     let _mainData: MainData = {
-      chapters: MainDataContainer._loadAllChapters()
+      chapters: MainDataContainer._loadAllChapters(),
+      allQuestion: MainDataContainer._loadAllQuestion()
     }
     super(_mainData);
 
@@ -43,6 +49,11 @@ export class MainDataContainer extends BaseContainer<MainData> implements IMainD
 
   getAllChapter(): Chapter[] {
     return this._data.chapters
+  }
+
+  getRandomQuestion(howMany: number): Question[] {
+    const shuffled = this._data.allQuestion.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, howMany);
   }
 
   getChapter(input: number | string): Chapter | undefined {
@@ -80,4 +91,24 @@ export class MainDataContainer extends BaseContainer<MainData> implements IMainD
     ];
   }
 
+  private static _loadAllQuestion(): Question[] {
+    return allQdata.map((localQuestion: LocalQuestion, index: number): Question => {
+      const options: Option[] = localQuestion.options.map(([id, text]) => ({
+        id_option: id.toString(),
+        option: text
+      }));
+
+      const answer: Answer = {
+        id_options: localQuestion.ansuwers.map(id => id.toString()),
+        //explanation: localQuestion.question // Assuming the 'question' field in LocalQuestion is actually the explanation
+      };
+
+      return {
+        id_question: index + 1, // Assuming we want to start the id from 1
+        question: localQuestion.question || "No question provided",
+        options: options,
+        answer: answer
+      };
+    });
+  }
 }

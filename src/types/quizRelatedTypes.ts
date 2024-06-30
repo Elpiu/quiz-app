@@ -5,7 +5,7 @@ type  Option = {
 
 type  Answer = {
   id_options: string[];
-  explanation: string;
+  explanation?: string;
 }
 
 type  Question = {
@@ -19,4 +19,13 @@ type Chapter = {
   id: number;
   chapterName: string;
   questions: Question[],
+}
+
+type Pair<A, B> = [A, B]
+
+interface LocalQuestion  {
+  question?: string,
+  options: Pair<number,string>[]
+  ansuwers: number[]
+  optionCounter: number
 }
