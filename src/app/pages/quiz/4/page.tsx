@@ -1,22 +1,16 @@
 "use client"
 
 import React, { useState } from 'react';
-import { useParams } from "next/navigation";
 import { useContainer } from "@/lib/core/hook/genericHookForBaseContainer";
 import { MainDataContainer } from "@/lib/custom-container/MainDataContainer";
 import { injectMainDataContainer } from "@/lib/config/ioc";
 
 
 export default function QuizPage() {
-  const params = useParams();
-  const id = params.id;
 
-  if (!id) {
-    throw new Error("Id deve essere presente");
-  }
 
   const { getChapter } = useContainer<MainDataContainer, any>(MainDataContainer, injectMainDataContainer);
-  const chapter = getChapter(id);
+  const chapter = getChapter(4);
   const [score, setScore] = useState(0);
 
   const handleQuestionValidate = (isCorrect: boolean) => {
