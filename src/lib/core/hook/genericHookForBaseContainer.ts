@@ -11,6 +11,8 @@ export interface ContainerMethods<T> {
 // Tipo che rappresenta il costruttore di una classe che estende BaseContainer<T>
 type ContainerClass<T, M extends ContainerMethods<T>> = new (...args: any[]) => BaseContainer<T> & M;
 
+// @ts-ignore
+// @ts-ignore
 /**
  * Hook generico per utilizzare un container che estende BaseContainer
  * @template T - Tipo dei dati contenuti nel container
@@ -19,8 +21,10 @@ type ContainerClass<T, M extends ContainerMethods<T>> = new (...args: any[]) => 
  * @param injectContainer - Istanza del container iniettata
  * @returns Un oggetto contenente i dati correnti e i metodi tipizzati del container
  */
+
 export function useContainer<T, M extends ContainerMethods<T>>(
   ContainerClass: ContainerClass<T, M>,
+  //@ts-ignore
   injectContainer: InstanceType<ContainerClass>
 ): { data: T } & M {
   const [data, setData] = useState<T>(() => injectContainer.getCurrentValue());

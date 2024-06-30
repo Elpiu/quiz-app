@@ -6,8 +6,8 @@ import {IMainDataContainer, MainData, MainDataContainer} from "@/lib/custom-cont
 
 export default function SimpleC(){
 
-  // @ts-ignore
-  const { data, getChapter, getNumberOfChapters } = useContainer(MainDataContainer, injectMainDataContainer);
+
+  const { data, getChapter, getNumberOfChapters } = useContainer<MainDataContainer, any>(MainDataContainer, injectMainDataContainer);
 
 
   return <div className="tooltip" data-tip={getChapter(3).chapterName}>

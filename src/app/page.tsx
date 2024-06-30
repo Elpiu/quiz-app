@@ -9,7 +9,7 @@ import {MainDataContainer} from "@/lib/custom-container/MainDataContainer";
 
 export default function Home() {
 
-  const { getAllChapter, getNumberOfChapters } = useContainer(MainDataContainer, injectMainDataContainer);
+  const { getAllChapter } = useContainer<MainDataContainer, any>(MainDataContainer, injectMainDataContainer);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

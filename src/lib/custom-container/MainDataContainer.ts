@@ -16,7 +16,6 @@ import chapter10 from '../../../myData/dataJson/Chapter 10.json';
 import chapter11 from '../../../myData/dataJson/Chapter 11.json';
 import chapter12 from '../../../myData/dataJson/Chapter 12.json';
 import allQdata from '../../../myData/dataJson/data.json';
-import {opt} from "ts-interface-checker";
 
 
 
@@ -87,11 +86,13 @@ export class MainDataContainer extends BaseContainer<MainData> implements IMainD
       chapter9,
       chapter10,
       chapter11,
+      //@ts-ignore
       chapter12
     ];
   }
 
   private static _loadAllQuestion(): Question[] {
+    //@ts-ignore
     return allQdata.map((localQuestion: LocalQuestion, index: number): Question => {
       const options: Option[] = localQuestion.options.map(([id, text]) => ({
         id_option: id.toString(),

@@ -8,7 +8,7 @@ import {injectMainDataContainer} from "@/lib/config/ioc";
 
 export default function Navbar() {
 
-  const { getAllChapter } = useContainer(MainDataContainer, injectMainDataContainer);
+  const { getAllChapter } = useContainer<MainDataContainer, any>(MainDataContainer, injectMainDataContainer);
 
   return <div className="navbar bg-primary text-primary-content">
     <div className="flex-1">

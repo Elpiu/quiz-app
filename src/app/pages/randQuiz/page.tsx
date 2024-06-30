@@ -36,7 +36,7 @@ interface QuizState {
 
 export default function RandQuiz() {
   const numberOfQuestions = 60;
-  const { getRandomQuestion } = useContainer<MainData, MainDataContainerMethods>(MainDataContainer, injectMainDataContainer);
+  const { getRandomQuestion } = useContainer<MainData, any>(MainDataContainer, injectMainDataContainer);
   const [quizState, setQuizState] = useState<QuizState | null>(null);
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);

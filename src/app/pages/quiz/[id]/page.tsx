@@ -15,7 +15,7 @@ export default function QuizPage() {
     throw new Error("Id deve essere presente");
   }
 
-  const { getChapter } = useContainer(MainDataContainer, injectMainDataContainer);
+  const { getChapter } = useContainer<MainDataContainer, any>(MainDataContainer, injectMainDataContainer);
   const chapter = getChapter(id);
   const [score, setScore] = useState(0);
 
@@ -54,7 +54,7 @@ type QuestionCardProps = {
 const QuestionCard = ({ question, onValidate }: QuestionCardProps) => {
   const [showHint, setShowHint] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
-  const [isCorrect, setIsCorrect] = useState(null);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
   const handleOptionChange = (optionId: string) => {
     setSelectedOption(optionId);
@@ -62,8 +62,10 @@ const QuestionCard = ({ question, onValidate }: QuestionCardProps) => {
 
   const handleValidate = () => {
     const isAnswerCorrect = question.answer?.id_options.includes(selectedOption);
-    setIsCorrect(isAnswerCorrect);
-    onValidate(isAnswerCorrect);
+    if(isAnswerCorrect) {
+      setIsCorrect(isAnswerCorrect);
+      onValidate(isAnswerCorrect);
+    }
   };
 
   return (
